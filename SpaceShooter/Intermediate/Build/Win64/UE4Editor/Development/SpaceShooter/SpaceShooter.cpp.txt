@@ -1,0 +1,2 @@
+D:\Unreal Projects\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\Definitions.SpaceShooter.h
+D:\Unreal Projects\SpaceShooter\Source\SpaceShooter\SpaceShooter.h
