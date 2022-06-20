@@ -1,9 +1,9 @@
-D:\Unreal Projects\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\Definitions.SpaceShooter.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\Definitions.SpaceShooter.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Unreal Projects\SpaceShooter\Source\SpaceShooter/SpaceShooterGameModeBase.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter/SpaceShooterGameModeBase.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-D:\Unreal Projects\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\SpaceShooterGameModeBase.generated.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\SpaceShooterGameModeBase.generated.h

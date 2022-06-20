@@ -59,7 +59,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerCharacter); \
 
 
 #define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__playerMesh() { return STRUCT_OFFSET(APlayerCharacter, playerMesh); } \
+	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(APlayerCharacter, CameraBoom); } \
+	FORCEINLINE static uint32 __PPO__SideViewCameraComponent() { return STRUCT_OFFSET(APlayerCharacter, SideViewCameraComponent); } \
 	FORCEINLINE static uint32 __PPO__rotationSpeed() { return STRUCT_OFFSET(APlayerCharacter, rotationSpeed); } \
 	FORCEINLINE static uint32 __PPO__movementSpeed() { return STRUCT_OFFSET(APlayerCharacter, movementSpeed); } \
 	FORCEINLINE static uint32 __PPO__rotationValue() { return STRUCT_OFFSET(APlayerCharacter, rotationValue); }

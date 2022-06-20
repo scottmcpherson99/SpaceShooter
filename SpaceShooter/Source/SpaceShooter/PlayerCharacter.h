@@ -13,14 +13,31 @@ UCLASS()
 class SPACESHOOTER_API APlayerCharacter : public APaperCharacter
 {
 	GENERATED_BODY()
+
+		/** Camera boom positioning the camera beside the character */
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		class USpringArmComponent* CameraBoom;
+
+	/** Side view camera */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		class UCameraComponent* SideViewCameraComponent;
+
+public:
 		//the player sprite
-		UPROPERTY(EditAnywhere, Category = Sprite)
+		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Sprite)
 		class UPaperSpriteComponent* playerMesh;
 
 
 public:
 	//constructor
 	APlayerCharacter();
+
+	//player bullet asset
+	UPROPERTY(EditAnywhere, Category = "Assets")
+		TSubclassOf<class APlayerBullet> playerBullet;
+	
+	//get the current rotation value of the player
+	float GetRotationValue();
 
 protected:
 
@@ -32,6 +49,9 @@ protected:
 
 	//Rotate the player character
 	void Rotate(float inputValue);
+
+	//shoot a bullet in the direction the player is facing
+	void Shoot();
 
 	//controls the speed at which the player can rotate
 	UPROPERTY(EditAnywhere, meta = (UIMin = 0.5, UIMax = 2), Category = movement)

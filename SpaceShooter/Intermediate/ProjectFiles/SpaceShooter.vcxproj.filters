@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\SpaceShooter.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CC5AA1CC-2E9A-40CE-9660-FB436A0C14A5}</UniqueIdentifier>
+      <UniqueIdentifier>{DE5CA832-BC27-4CE5-8DA6-C153F9200E4C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\SpaceShooter.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{C219E690-0CA7-4C5B-A904-536C6FF3E52F}</UniqueIdentifier>
+      <UniqueIdentifier>{F51D5E31-CB40-4D09-B003-5A7917C8DD1C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,9 +23,24 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\SpaceShooter">
-      <UniqueIdentifier>{AF251342-444F-45AE-AAA2-3D7C767957CC}</UniqueIdentifier>
+      <UniqueIdentifier>{89F347F4-227E-408D-B3E5-E1459CABEC56}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SpaceShooter\Bullet.cpp">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceShooter\Bullet.h">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpaceShooter\PlayerBullet.cpp">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceShooter\PlayerBullet.h">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\SpaceShooter\PlayerCharacter.cpp">
       <Filter>Source\SpaceShooter</Filter>
     </ClCompile>

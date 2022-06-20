@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "SpaceShooter",
-			"Path": "D:\\Unreal Projects\\SpaceShooter\\Source\\SpaceShooter.Target.cs",
+			"Path": "D:\\Unreal Projects\\SpaceShooter_\\SpaceShooter\\Source\\SpaceShooter.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "SpaceShooterEditor",
-			"Path": "D:\\Unreal Projects\\SpaceShooter\\Source\\SpaceShooterEditor.Target.cs",
+			"Path": "D:\\Unreal Projects\\SpaceShooter_\\SpaceShooter\\Source\\SpaceShooterEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\Unreal Projects\\SpaceShooter\\Source\\SpaceShooter\\SpaceShooter.Build.cs",
-		"D:\\Unreal Projects\\SpaceShooter\\Source\\SpaceShooter.Target.cs",
-		"D:\\Unreal Projects\\SpaceShooter\\Source\\SpaceShooterEditor.Target.cs"
+		"D:\\Unreal Projects\\SpaceShooter_\\SpaceShooter\\Source\\SpaceShooter\\SpaceShooter.Build.cs",
+		"D:\\Unreal Projects\\SpaceShooter_\\SpaceShooter\\Source\\SpaceShooter.Target.cs",
+		"D:\\Unreal Projects\\SpaceShooter_\\SpaceShooter\\Source\\SpaceShooterEditor.Target.cs"
 	],
 	"EngineVersion": "4.26.2"
 }
