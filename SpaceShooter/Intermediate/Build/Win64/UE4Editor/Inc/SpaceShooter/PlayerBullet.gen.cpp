@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerBullet() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerBullet, 4289846320);
+	IMPLEMENT_CLASS(APlayerBullet, 3290873560);
 	template<> SPACESHOOTER_API UClass* StaticClass<APlayerBullet>()
 	{
 		return APlayerBullet::StaticClass();

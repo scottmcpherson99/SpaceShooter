@@ -1,0 +1,3 @@
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\Definitions.SpaceShooter.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\Wall.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\Wall.generated.h

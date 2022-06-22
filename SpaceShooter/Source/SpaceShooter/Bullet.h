@@ -14,10 +14,6 @@ class SPACESHOOTER_API ABullet : public APaperSpriteActor
 {
 	GENERATED_BODY()
 
-		//the player sprite
-		UPROPERTY(EditAnywhere, Category = Sprite)
-		class UPaperSpriteComponent* bulletMesh;
-
 public:
 	//constructor
 	ABullet();
@@ -29,9 +25,25 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
+
+	
+
+	//the player sprite
+	UPROPERTY(EditAnywhere, Category = Sprite)
+		class UPaperSpriteComponent* bulletMesh;
+
+	//trigger box to check for collisions with the bullet actor
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collision")
+		class UBoxComponent* TriggerBox;
+
+	//checks to see if any actors have overlapped the collision box
+	UFUNCTION()
+		void OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
 	//controls the speed at which the bullet can move
 	UPROPERTY(EditAnywhere, meta = (UIMin = 0.5, UIMax = 2), Category = movement)
 		float movementSpeed;
 
+	//the degree at which the bullet should be travelling along the horizontal axis
 	float rotationValue;
 };
