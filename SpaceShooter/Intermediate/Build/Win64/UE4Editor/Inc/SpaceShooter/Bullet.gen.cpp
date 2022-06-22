@@ -194,8 +194,8 @@ void EmptyLinkFunctionForGeneratedCodeBullet() {}
 		{ "Comment", "//controls the speed at which the bullet can move\n" },
 		{ "ModuleRelativePath", "Bullet.h" },
 		{ "ToolTip", "controls the speed at which the bullet can move" },
-		{ "UIMax", "2" },
-		{ "UIMin", "0.500000" },
+		{ "UIMax", "2000" },
+		{ "UIMin", "500" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABullet_Statics::NewProp_movementSpeed = { "movementSpeed", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABullet, movementSpeed), METADATA_PARAMS(Z_Construct_UClass_ABullet_Statics::NewProp_movementSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABullet_Statics::NewProp_movementSpeed_MetaData)) };
@@ -231,7 +231,7 @@ void EmptyLinkFunctionForGeneratedCodeBullet() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABullet, 753738965);
+	IMPLEMENT_CLASS(ABullet, 2758272647);
 	template<> SPACESHOOTER_API UClass* StaticClass<ABullet>()
 	{
 		return ABullet::StaticClass();

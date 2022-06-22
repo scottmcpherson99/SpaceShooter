@@ -43,6 +43,8 @@ void ABullet::Tick(float DeltaTime)
 	AddActorLocalOffset(FVector(UKismetMathLibrary::DegSin(rotationValue) * DeltaTime * movementSpeed, UKismetMathLibrary::DegCos(rotationValue) * -DeltaTime * movementSpeed, 0.0f));
 }
 
+/// //////////////////////////////////////////////////////////////////////
+/// Collision
 void ABullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	AWall* wallMesh = Cast<AWall>(OtherActor);
@@ -53,3 +55,4 @@ void ABullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 		Destroy();
 	}
 }
+/// //////////////////////////////////////////////////////////////////////

@@ -25,9 +25,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 protected:
-
-	
-
 	//the player sprite
 	UPROPERTY(EditAnywhere, Category = Sprite)
 		class UPaperSpriteComponent* bulletMesh;
@@ -41,7 +38,7 @@ protected:
 		void OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 	//controls the speed at which the bullet can move
-	UPROPERTY(EditAnywhere, meta = (UIMin = 0.5, UIMax = 2), Category = movement)
+	UPROPERTY(EditAnywhere, meta = (UIMin = 500, UIMax = 2000), Category = movement)
 		float movementSpeed;
 
 	//the degree at which the bullet should be travelling along the horizontal axis

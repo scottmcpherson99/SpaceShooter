@@ -1,11 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Projects\SpaceShooter_).
   Building SpaceShooterEditor...
   Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 3 actions with 16 processes...
-    [1/3] UE4Editor-SpaceShooter-0145.lib
-       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0145.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0145.exp
-    [2/3] UE4Editor-SpaceShooter-0145.dll
-       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0145.suppressed.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0145.suppressed.exp
-    [3/3] SpaceShooterEditor.target
-  Total time in Parallel executor: 0.93 seconds
-  Total execution time: 1.35 seconds
+  Building 4 actions with 16 processes...
+    [1/4] EnemyCharacter.cpp
+    [2/4] UE4Editor-SpaceShooter-0151.lib
+       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0151.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0151.exp
+    [3/4] UE4Editor-SpaceShooter-0151.dll
+       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0151.suppressed.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0151.suppressed.exp
+    [4/4] SpaceShooterEditor.target
+  Total time in Parallel executor: 3.20 seconds
+  Total execution time: 3.68 seconds

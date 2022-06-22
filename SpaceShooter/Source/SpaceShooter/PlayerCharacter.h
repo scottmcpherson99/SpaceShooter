@@ -23,12 +23,10 @@ class SPACESHOOTER_API APlayerCharacter : public APaperCharacter
 		class UCameraComponent* SideViewCameraComponent;
 
 public:
-		//the player sprite
-		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Sprite)
-		class UPaperSpriteComponent* playerMesh;
+	//the player sprite
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Sprite)
+	class UPaperSpriteComponent* playerMesh;
 
-
-public:
 	//constructor
 	APlayerCharacter();
 
