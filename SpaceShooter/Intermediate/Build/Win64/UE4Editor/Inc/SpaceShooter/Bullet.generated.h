@@ -8,25 +8,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UPrimitiveComponent;
-class AActor;
-struct FHitResult;
 #ifdef SPACESHOOTER_Bullet_generated_h
 #error "Bullet.generated.h already included, missing '#pragma once' in Bullet.h"
 #endif
 #define SPACESHOOTER_Bullet_generated_h
 
 #define SpaceShooter_Source_SpaceShooter_Bullet_h_15_SPARSE_DATA
-#define SpaceShooter_Source_SpaceShooter_Bullet_h_15_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execOnTriggerBoxOverlap);
-
-
-#define SpaceShooter_Source_SpaceShooter_Bullet_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execOnTriggerBoxOverlap);
-
-
+#define SpaceShooter_Source_SpaceShooter_Bullet_h_15_RPC_WRAPPERS
+#define SpaceShooter_Source_SpaceShooter_Bullet_h_15_RPC_WRAPPERS_NO_PURE_DECLS
 #define SpaceShooter_Source_SpaceShooter_Bullet_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABullet(); \

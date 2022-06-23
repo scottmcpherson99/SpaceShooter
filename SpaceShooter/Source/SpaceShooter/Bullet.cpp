@@ -34,7 +34,7 @@ void ABullet::BeginPlay()
 	bulletMesh->AddRelativeRotation(FRotator(0.0f, rotationValue, 0.0f));
 
 	//turn on collision checks
-	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ABullet::OnTriggerBoxOverlap);
+	//TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &ABullet::OnTriggerBoxOverlap);
 }
 
 void ABullet::Tick(float DeltaTime)
@@ -45,7 +45,7 @@ void ABullet::Tick(float DeltaTime)
 
 /// //////////////////////////////////////////////////////////////////////
 /// Collision
-void ABullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+/*void ABullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	AWall* wallMesh = Cast<AWall>(OtherActor);
 
@@ -54,5 +54,5 @@ void ABullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AAct
 	{
 		Destroy();
 	}
-}
+}*/
 /// //////////////////////////////////////////////////////////////////////

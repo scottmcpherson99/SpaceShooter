@@ -34,8 +34,8 @@ protected:
 		class UBoxComponent* TriggerBox;
 
 	//checks to see if any actors have overlapped the collision box
-	UFUNCTION()
-		void OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	//UFUNCTION()
+		//void OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 	//controls the speed at which the bullet can move
 	UPROPERTY(EditAnywhere, meta = (UIMin = 500, UIMax = 2000), Category = movement)

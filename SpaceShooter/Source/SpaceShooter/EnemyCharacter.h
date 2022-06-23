@@ -21,6 +21,9 @@ public:
 	//called on begin play
 	virtual void BeginPlay() override;
 
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
 protected:
 	//the player sprite
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Sprite)

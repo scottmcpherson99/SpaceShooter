@@ -8,14 +8,25 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef SPACESHOOTER_PlayerBullet_generated_h
 #error "PlayerBullet.generated.h already included, missing '#pragma once' in PlayerBullet.h"
 #endif
 #define SPACESHOOTER_PlayerBullet_generated_h
 
 #define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_SPARSE_DATA
-#define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_RPC_WRAPPERS
-#define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnTriggerBoxOverlap);
+
+
+#define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnTriggerBoxOverlap);
+
+
 #define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerBullet(); \
@@ -36,7 +47,7 @@ public: \
 
 #define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APlayerBullet(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API APlayerBullet(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APlayerBullet) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, APlayerBullet); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerBullet); \
@@ -48,8 +59,6 @@ public:
 
 
 #define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API APlayerBullet() { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APlayerBullet(APlayerBullet&&); \

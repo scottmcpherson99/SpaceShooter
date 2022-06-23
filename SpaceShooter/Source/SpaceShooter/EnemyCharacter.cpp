@@ -6,6 +6,7 @@
 #include "PlayerCharacter.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "Components/BoxComponent.h"
 
 AEnemyCharacter::AEnemyCharacter()
@@ -22,9 +23,16 @@ AEnemyCharacter::AEnemyCharacter()
 
 void AEnemyCharacter::BeginPlay()
 {
-
+	Super::BeginPlay();
 	//turn on collision checks
 	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &AEnemyCharacter::OnTriggerBoxOverlap);
+}
+
+void AEnemyCharacter::Tick(float DeltaTime)
+{
+	
+	//move the bullet forward in the direction it is facing
+	//AddActorLocalOffset(FVector(DeltaTime * 1.0f, 0.0f, 0.0f));
 }
 
 void AEnemyCharacter::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
