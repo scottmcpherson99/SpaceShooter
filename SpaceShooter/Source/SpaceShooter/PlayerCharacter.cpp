@@ -2,6 +2,7 @@
 
 
 #include "PlayerCharacter.h"
+#include "SpaceShooterGameMode.h"
 #include "PlayerBullet.h"
 #include "PaperSpriteComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -124,11 +125,22 @@ void APlayerCharacter::Shoot()
 void APlayerCharacter::IncreaseScore(int updatedScore_)
 {
 	score += updatedScore_;
+	ASpaceShooterGameMode* gameMode = (ASpaceShooterGameMode*)GetWorld()->GetAuthGameMode();
+	if (gameMode)
+	{
+		gameMode->UpdatePlayerStats(health, score);
+	}
+
 }
 
 void APlayerCharacter::UpdateHealth(int updatedHealth_)
 {
 	health += updatedHealth_;
+	ASpaceShooterGameMode* gameMode = (ASpaceShooterGameMode*)GetWorld()->GetAuthGameMode();
+	if (gameMode)
+	{
+		gameMode->UpdatePlayerStats(health, score);
+	}
 }
 
 int APlayerCharacter::GetPlayerScore()
