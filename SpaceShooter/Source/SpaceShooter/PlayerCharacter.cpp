@@ -39,6 +39,10 @@ APlayerCharacter::APlayerCharacter()
 	//set default values for players movement stats
 	movementSpeed = 1.f;
 	rotationSpeed = 1.f;
+
+	//set the default player stats
+	score = 0;
+	health = 3;
 }
 
 /// //////////////////////////////////////////////////////////////////////
@@ -84,6 +88,7 @@ float APlayerCharacter::GetRotationValue()
 {
 	return rotationValue;
 }
+
 /// //////////////////////////////////////////////////////////////////////
 
 
@@ -112,3 +117,27 @@ void APlayerCharacter::Shoot()
 	}
 }
 /// //////////////////////////////////////////////////////////////////////
+
+
+/// //////////////////////////////////////////////////////////////////////
+/// Player Stats
+void APlayerCharacter::IncreaseScore(int updatedScore_)
+{
+	score += updatedScore_;
+}
+
+void APlayerCharacter::UpdateHealth(int updatedHealth_)
+{
+	health += updatedHealth_;
+}
+
+int APlayerCharacter::GetPlayerScore()
+{
+	return score;
+}
+
+int APlayerCharacter::GetPlayerHealth()
+{
+	return health;
+}
+/// /////////////////////////////////////////////////////////////////////////

@@ -3,7 +3,9 @@
 
 #include "PlayerBullet.h"
 #include "EnemyCharacter.h"
+#include "PlayerCharacter.h"
 #include "Wall.h"
+#include "Kismet/GameplayStatics.h"
 #include "Components/BoxComponent.h"
 
 APlayerBullet::APlayerBullet()
@@ -24,10 +26,17 @@ void APlayerBullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent
 
 	AEnemyCharacter* enemyCharacter = Cast<AEnemyCharacter>(OtherActor);
 
-	//if the colliding actor is a wall actor, destoy the bullet
+	//if the colliding actor is a wall actor, destoy the bullet and increase the player's score
 	if (enemyCharacter != nullptr)
 	{
 		enemyCharacter->Destroy();
+
+		APlayerCharacter* playerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+		if (playerCharacter != nullptr)
+		{
+			playerCharacter->IncreaseScore(10);
+		}
+
 		Destroy();
 	}
 

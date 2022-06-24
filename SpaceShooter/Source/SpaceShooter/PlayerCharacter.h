@@ -37,6 +37,17 @@ public:
 	//get the current rotation value of the player
 	float GetRotationValue();
 
+	//increase the players score
+	void IncreaseScore(int updatedScore_);
+
+	//update the players health
+	void UpdateHealth(int updatedHealth_);
+
+	//recieve the players score
+	int GetPlayerScore();
+
+	//recieve the players health
+	int GetPlayerHealth();
 protected:
 
 	// APlayerCharacter Interface
@@ -63,4 +74,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float rotationValue;
 
+private:
+	//player values
+	int score;
+	int health;
 };

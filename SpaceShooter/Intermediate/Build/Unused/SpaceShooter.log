@@ -1,13 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Projects\SpaceShooter_).
   Building SpaceShooterEditor...
   Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 5 actions with 16 processes...
-    [1/5] EnemyCharacter.cpp
-    [2/5] FindPlayerLocation.cpp
-    [3/5] UE4Editor-SpaceShooter-0180.lib
-       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0180.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0180.exp
-    [4/5] UE4Editor-SpaceShooter-0180.dll
-       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0180.suppressed.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0180.suppressed.exp
-    [5/5] SpaceShooterEditor.target
-  Total time in Parallel executor: 269.33 seconds
-  Total execution time: 269.80 seconds
+  Building 4 actions with 16 processes...
+    [1/4] PlayerCharacter.cpp
+    [2/4] UE4Editor-SpaceShooter-0188.lib
+       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0188.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0188.exp
+    [3/4] UE4Editor-SpaceShooter-0188.dll
+       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0188.suppressed.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0188.suppressed.exp
+    [4/4] SpaceShooterEditor.target
+  Total time in Parallel executor: 3.00 seconds
+  Total execution time: 3.45 seconds

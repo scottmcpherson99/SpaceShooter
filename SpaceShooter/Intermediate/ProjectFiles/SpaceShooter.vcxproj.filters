@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\SpaceShooter.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{EB0AB60F-DB6F-4779-87C2-35D410E13C0F}</UniqueIdentifier>
+      <UniqueIdentifier>{4494616F-F6E3-4A74-9D13-1A6EE5D70037}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\SpaceShooter.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{5DD9FCE9-E2FA-40BB-A21F-7B3220303EA5}</UniqueIdentifier>
+      <UniqueIdentifier>{F31D00CB-6EBD-4B29-93F8-0C585B27854D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\SpaceShooter">
-      <UniqueIdentifier>{BEAF14A2-AF93-4EA9-ABBD-965B12988B3B}</UniqueIdentifier>
+      <UniqueIdentifier>{6F9AC71B-0BDE-4982-8CE7-205FABA7972C}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\SpaceShooter\blackboard_keys.h">
       <Filter>Source\SpaceShooter</Filter>
@@ -54,6 +54,12 @@
       <Filter>Source\SpaceShooter</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\SpaceShooter\FindPlayerLocation.h">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpaceShooter\MoveToPlayer.cpp">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceShooter\MoveToPlayer.h">
       <Filter>Source\SpaceShooter</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\SpaceShooter\PlayerBullet.cpp">
