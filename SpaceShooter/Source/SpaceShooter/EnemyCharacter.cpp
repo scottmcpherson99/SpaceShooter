@@ -42,6 +42,7 @@ void AEnemyCharacter::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedCompone
 	//if the colliding actor is a wall actor, destoy the bullet
 	if (playerCharacter != nullptr)
 	{
-		UKismetSystemLibrary::QuitGame(GetWorld(), UGameplayStatics::GetPlayerController(GetWorld(), 0), EQuitPreference::Quit, true);
+		playerCharacter->UpdateHealth(-1);
+		//UKismetSystemLibrary::QuitGame(GetWorld(), UGameplayStatics::GetPlayerController(GetWorld(), 0), EQuitPreference::Quit, true);
 	}
 }
