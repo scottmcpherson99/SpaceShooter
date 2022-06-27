@@ -21,7 +21,7 @@ public:
 
 	virtual void BeginPlay() override;
 
-	void UpdatePlayerStats(int playerHealth_, int playerScore_);
+	void UpdatePlayerStats(int playerHealth_, int playerScore_, int highScore_);
 
 protected:
 	//widget class to use for our hud screen
@@ -30,4 +30,12 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category = "Widget")
 	class UGameScreenWidget* gameWidget;
+
+	//save the players high score
+	class USaveScore* savePlayerHighScore;
+
+
+	//save game state
+	UPROPERTY(EditAnywhere, Category = "Save Game")
+		TSubclassOf<class USaveScore> saveState;
 };

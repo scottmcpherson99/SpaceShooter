@@ -37,6 +37,10 @@ void EmptyLinkFunctionForGeneratedCodeGameScreenWidget() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerScore;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerHighScore_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerHighScore;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerHealth_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerHealth;
@@ -67,6 +71,17 @@ void EmptyLinkFunctionForGeneratedCodeGameScreenWidget() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerScore = { "PlayerScore", nullptr, (EPropertyFlags)0x002008000008000c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameScreenWidget, PlayerScore), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerScore_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerScore_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHighScore_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "GameScreenWidget" },
+		{ "Comment", "//the players highscore\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "GameScreenWidget.h" },
+		{ "ToolTip", "the players highscore" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHighScore = { "PlayerHighScore", nullptr, (EPropertyFlags)0x002008000008000c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameScreenWidget, PlayerHighScore), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHighScore_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHighScore_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHealth_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "GameScreenWidget" },
@@ -79,6 +94,7 @@ void EmptyLinkFunctionForGeneratedCodeGameScreenWidget() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHealth = { "PlayerHealth", nullptr, (EPropertyFlags)0x002008000008000c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGameScreenWidget, PlayerHealth), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHealth_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UGameScreenWidget_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerScore,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHighScore,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGameScreenWidget_Statics::NewProp_PlayerHealth,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGameScreenWidget_Statics::StaticCppClassTypeInfo = {
@@ -108,7 +124,7 @@ void EmptyLinkFunctionForGeneratedCodeGameScreenWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGameScreenWidget, 3977800721);
+	IMPLEMENT_CLASS(UGameScreenWidget, 1999157516);
 	template<> SPACESHOOTER_API UClass* StaticClass<UGameScreenWidget>()
 	{
 		return UGameScreenWidget::StaticClass();

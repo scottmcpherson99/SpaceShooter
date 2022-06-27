@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SPACESHOOTER_PlayerCharacter_generated_h
 
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_SPARSE_DATA
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_RPC_WRAPPERS
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_INCLASS_NO_PURE_DECLS \
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_SPARSE_DATA
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_RPC_WRAPPERS
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerCharacter)
 
 
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_INCLASS \
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerCharacter)
 
 
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_STANDARD_CONSTRUCTORS \
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APlayerCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(APlayerCharacter) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_ENHANCED_CONSTRUCTORS \
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API APlayerCharacter(APlayerCharacter&&); \
@@ -58,7 +58,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APlayerCharacter)
 
 
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(APlayerCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__SideViewCameraComponent() { return STRUCT_OFFSET(APlayerCharacter, SideViewCameraComponent); } \
 	FORCEINLINE static uint32 __PPO__rotationSpeed() { return STRUCT_OFFSET(APlayerCharacter, rotationSpeed); } \
@@ -66,27 +66,27 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerCharacter); \
 	FORCEINLINE static uint32 __PPO__rotationValue() { return STRUCT_OFFSET(APlayerCharacter, rotationValue); }
 
 
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_12_PROLOG
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_GENERATED_BODY_LEGACY \
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_13_PROLOG
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_SPARSE_DATA \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_RPC_WRAPPERS \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_INCLASS \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_STANDARD_CONSTRUCTORS \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_SPARSE_DATA \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_RPC_WRAPPERS \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_INCLASS \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_GENERATED_BODY \
+#define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_SPARSE_DATA \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_INCLASS_NO_PURE_DECLS \
-	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_15_ENHANCED_CONSTRUCTORS \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_SPARSE_DATA \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
+	SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

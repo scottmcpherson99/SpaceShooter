@@ -61,17 +61,14 @@ void ASpawnVolume::SetSpawningActive(bool bShouldSpawn)
 
 void ASpawnVolume::SpawnPickup()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Spawn Pickup Function started")));
 
 	//if we have set something to spawn
 	if (whatToSpawn != NULL)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("What to spawn != nullptr")));
 		//check for a valid world
 		UWorld* const world = GetWorld();
 		if (world)
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("World was not a nullptr!")));
 
 			//set the spawn parameters
 			FActorSpawnParameters SpawnParams;

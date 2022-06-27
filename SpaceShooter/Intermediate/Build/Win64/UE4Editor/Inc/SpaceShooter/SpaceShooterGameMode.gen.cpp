@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceShooterGameMode() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	SPACESHOOTER_API UClass* Z_Construct_UClass_UGameScreenWidget_NoRegister();
+	SPACESHOOTER_API UClass* Z_Construct_UClass_USaveScore_NoRegister();
 // End Cross Module References
 	void ASpaceShooterGameMode::StaticRegisterNativesASpaceShooterGameMode()
 	{
@@ -42,6 +43,10 @@ void EmptyLinkFunctionForGeneratedCodeSpaceShooterGameMode() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_gameWidget_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_gameWidget;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_saveState_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_saveState;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -76,9 +81,19 @@ void EmptyLinkFunctionForGeneratedCodeSpaceShooterGameMode() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_gameWidget = { "gameWidget", nullptr, (EPropertyFlags)0x0020080000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpaceShooterGameMode, gameWidget), Z_Construct_UClass_UGameScreenWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_gameWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_gameWidget_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_saveState_MetaData[] = {
+		{ "Category", "Save Game" },
+		{ "Comment", "//save game state\n" },
+		{ "ModuleRelativePath", "SpaceShooterGameMode.h" },
+		{ "ToolTip", "save game state" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_saveState = { "saveState", nullptr, (EPropertyFlags)0x0024080000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASpaceShooterGameMode, saveState), Z_Construct_UClass_USaveScore_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_saveState_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_saveState_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASpaceShooterGameMode_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_GameScreenWidget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_gameWidget,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceShooterGameMode_Statics::NewProp_saveState,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASpaceShooterGameMode_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASpaceShooterGameMode>::IsAbstract,
@@ -107,7 +122,7 @@ void EmptyLinkFunctionForGeneratedCodeSpaceShooterGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpaceShooterGameMode, 3523836502);
+	IMPLEMENT_CLASS(ASpaceShooterGameMode, 164712557);
 	template<> SPACESHOOTER_API UClass* StaticClass<ASpaceShooterGameMode>()
 	{
 		return ASpaceShooterGameMode::StaticClass();

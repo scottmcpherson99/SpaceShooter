@@ -14,4 +14,9 @@ void UGameScreenWidget::UpdatePlayerScore(int playerScore_)
 {
 	PlayerScore->SetText(FText::AsNumber(playerScore_));
 }
+
+void UGameScreenWidget::UpdatePlayerHighScore(int playerHighScore_)
+{
+	PlayerHighScore->SetText(FText::AsNumber(playerHighScore_));
+}
 /// //////////////////////////////////////////////////////////////////////

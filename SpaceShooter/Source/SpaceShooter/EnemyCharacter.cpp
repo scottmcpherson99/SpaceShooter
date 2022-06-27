@@ -30,19 +30,16 @@ void AEnemyCharacter::BeginPlay()
 
 void AEnemyCharacter::Tick(float DeltaTime)
 {
-	
-	//move the bullet forward in the direction it is facing
-	//AddActorLocalOffset(FVector(DeltaTime * 1.0f, 0.0f, 0.0f));
 }
 
 void AEnemyCharacter::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	APlayerCharacter* playerCharacter = Cast<APlayerCharacter>(OtherActor);
 
-	//if the colliding actor is a wall actor, destoy the bullet
+	//if the colliding actor is the player, destoy the enemy and take a life off the player
 	if (playerCharacter != nullptr)
 	{
 		playerCharacter->UpdateHealth(-1);
-		//UKismetSystemLibrary::QuitGame(GetWorld(), UGameplayStatics::GetPlayerController(GetWorld(), 0), EQuitPreference::Quit, true);
+		Destroy();
 	}
 }

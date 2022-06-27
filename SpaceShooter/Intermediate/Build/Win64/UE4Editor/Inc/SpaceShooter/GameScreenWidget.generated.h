@@ -62,6 +62,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UGameScreenWidget); \
 
 #define SpaceShooter_Source_SpaceShooter_GameScreenWidget_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__PlayerScore() { return STRUCT_OFFSET(UGameScreenWidget, PlayerScore); } \
+	FORCEINLINE static uint32 __PPO__PlayerHighScore() { return STRUCT_OFFSET(UGameScreenWidget, PlayerHighScore); } \
 	FORCEINLINE static uint32 __PPO__PlayerHealth() { return STRUCT_OFFSET(UGameScreenWidget, PlayerHealth); }
 
 

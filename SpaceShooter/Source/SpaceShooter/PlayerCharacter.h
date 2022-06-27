@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "PaperCharacter.h"
+#include "GameFramework/SaveGame.h"
 #include "PlayerCharacter.generated.h"
 
 /**
@@ -34,6 +35,12 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Assets")
 		TSubclassOf<class APlayerBullet> playerBullet;
 	
+	//save game state
+	UPROPERTY(EditAnywhere, Category = "Save Game")
+		TSubclassOf<class USaveScore> saveState;
+
+	class USaveScore* saveHighScore;
+
 	//get the current rotation value of the player
 	float GetRotationValue();
 
@@ -53,6 +60,9 @@ protected:
 	// APlayerCharacter Interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	//called on begin play
+	virtual void BeginPlay() override;
+
 	//Move the player character forward
 	void MoveForward(float inputValue);
 
@@ -61,6 +71,12 @@ protected:
 
 	//shoot a bullet in the direction the player is facing
 	void Shoot();
+
+	//load the current high score for the level
+	void LoadHighScore();
+
+	//save the new high score for the level
+	void SaveHighScore();
 
 	//controls the speed at which the player can rotate
 	UPROPERTY(EditAnywhere, meta = (UIMin = 0.5, UIMax = 2), Category = movement)
@@ -78,4 +94,5 @@ private:
 	//player values
 	int score;
 	int health;
+	int highScore;
 };

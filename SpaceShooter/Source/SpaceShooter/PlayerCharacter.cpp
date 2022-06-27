@@ -4,12 +4,15 @@
 #include "PlayerCharacter.h"
 #include "SpaceShooterGameMode.h"
 #include "PlayerBullet.h"
+#include "SaveScore.h"
 #include "PaperSpriteComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/InputComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -44,8 +47,14 @@ APlayerCharacter::APlayerCharacter()
 	//set the default player stats
 	score = 0;
 	health = 3;
+
 }
 
+void APlayerCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	LoadHighScore();
+}
 /// //////////////////////////////////////////////////////////////////////
 /// Input
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -60,6 +69,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 }
 
+
 /// //////////////////////////////////////////////////////////////////////
 
 
@@ -71,6 +81,8 @@ void APlayerCharacter::MoveForward(float inputValue)
 	{
 		//add player movement based off the current rotation and input from the player
 		AddMovementInput(FVector(UKismetMathLibrary::DegSin(-rotationValue), UKismetMathLibrary::DegCos(rotationValue), 0.0f), inputValue * movementSpeed);
+
+		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::FormatAsNumber(highScore));
 	}
 }
 
@@ -124,22 +136,39 @@ void APlayerCharacter::Shoot()
 /// Player Stats
 void APlayerCharacter::IncreaseScore(int updatedScore_)
 {
+	//update the players new score to the HUD
 	score += updatedScore_;
+
+	//update the highscore if a new highscore has been reached
+	if (highScore <= score)
+	{
+		highScore = score;
+		SaveHighScore();
+	}
+
 	ASpaceShooterGameMode* gameMode = (ASpaceShooterGameMode*)GetWorld()->GetAuthGameMode();
 	if (gameMode)
 	{
-		gameMode->UpdatePlayerStats(health, score);
+		gameMode->UpdatePlayerStats(health, score, highScore);
 	}
 
+	
 }
 
 void APlayerCharacter::UpdateHealth(int updatedHealth_)
 {
+	//update the players new health to the HUD
 	health += updatedHealth_;
 	ASpaceShooterGameMode* gameMode = (ASpaceShooterGameMode*)GetWorld()->GetAuthGameMode();
 	if (gameMode)
 	{
-		gameMode->UpdatePlayerStats(health, score);
+		gameMode->UpdatePlayerStats(health, score, highScore);
+	}
+
+	//if the player has run out of health, kill the player
+	if (health <= 0)
+	{
+		UKismetSystemLibrary::QuitGame(GetWorld(), UGameplayStatics::GetPlayerController(GetWorld(), 0), EQuitPreference::Quit, true);
 	}
 }
 
@@ -153,3 +182,43 @@ int APlayerCharacter::GetPlayerHealth()
 	return health;
 }
 /// /////////////////////////////////////////////////////////////////////////
+
+/// //////////////////////////////////////////////////////////////////////
+/// Save and load high score
+void APlayerCharacter::SaveHighScore()
+{
+	saveHighScore = Cast<USaveScore>(UGameplayStatics::CreateSaveGameObject(USaveScore::StaticClass()));
+
+	if (saveHighScore != nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Not a nullptr!!")));
+
+		saveHighScore->SetHighScore(highScore);
+	}
+	UGameplayStatics::SaveGameToSlot(saveHighScore, FString("Slot1"), 0);
+}
+
+
+void APlayerCharacter::LoadHighScore()
+{
+
+	ASpaceShooterGameMode* gameMode = (ASpaceShooterGameMode*)GetWorld()->GetAuthGameMode();
+
+	if (UGameplayStatics::DoesSaveGameExist(FString("Slot1"), 0))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Save game loaded!")));
+
+		USaveScore* loadGameObj_ = Cast<USaveScore>(UGameplayStatics::LoadGameFromSlot(FString("Slot1"), 0));
+	
+		highScore = loadGameObj_->GetHighScore();
+
+		gameMode->UpdatePlayerStats(health, score, highScore);
+	}
+	else
+	{
+		highScore = 0;
+		gameMode->UpdatePlayerStats(health, score, highScore);
+
+	}
+}
+/// /// //////////////////////////////////////////////////////////////////////
