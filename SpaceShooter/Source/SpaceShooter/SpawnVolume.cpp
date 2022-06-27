@@ -89,7 +89,6 @@ void ASpawnVolume::SpawnPickup()
 
 			spawnDelay = FMath::FRandRange(spawnDelayRangeLow, spawnDelayRangeMax);
 			GetWorldTimerManager().SetTimer(SpawnTimer, this, &ASpawnVolume::SpawnPickup, spawnDelay, false);
-			GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Spawned?")));
 
 		}
 	}

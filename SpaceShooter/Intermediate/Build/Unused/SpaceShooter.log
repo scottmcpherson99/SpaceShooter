@@ -1,18 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Projects\SpaceShooter_).
-  Parsing headers for SpaceShooterEditor
-    Running UnrealHeaderTool "D:\Unreal Projects\SpaceShooter_\SpaceShooter\SpaceShooter.uproject" "D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\SpaceShooterEditor\Development\SpaceShooterEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\scott\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for SpaceShooterEditor in 2.6257835 seconds
   Building SpaceShooterEditor...
   Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 7 actions with 16 processes...
-    [1/7] SaveScore.cpp
-    [2/7] SaveScore.gen.cpp
-    [3/7] PlayerCharacter.cpp
-    [4/7] SpaceShooterGameMode.cpp
-    [5/7] UE4Editor-SpaceShooter-0242.lib
-       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0242.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0242.exp
-    [6/7] UE4Editor-SpaceShooter-0242.dll
-       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0242.suppressed.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0242.suppressed.exp
-    [7/7] SpaceShooterEditor.target
-  Total time in Parallel executor: 6.19 seconds
-  Total execution time: 9.48 seconds
+  Building 4 actions with 16 processes...
+    [1/4] SpawnVolume.cpp
+    [2/4] UE4Editor-SpaceShooter-0253.lib
+       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0253.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0253.exp
+    [3/4] UE4Editor-SpaceShooter-0253.dll
+       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0253.suppressed.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0253.suppressed.exp
+    [4/4] SpaceShooterEditor.target
+  Total time in Parallel executor: 202.96 seconds
+  Total execution time: 206.21 seconds

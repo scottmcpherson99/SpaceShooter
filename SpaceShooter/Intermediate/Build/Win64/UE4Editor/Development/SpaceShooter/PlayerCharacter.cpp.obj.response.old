@@ -234,8 +234,8 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I "D:\Unreal Projects\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter"
-/I "D:\Unreal Projects\SpaceShooter\Source"
+/I "D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter"
+/I "D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source"
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -265,12 +265,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
-/FI"D:\Unreal Projects\SpaceShooter\Intermediate\Build\Win64\SpaceShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"D:\Unreal Projects\SpaceShooter\Intermediate\Build\Win64\SpaceShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\Unreal Projects\SpaceShooter\Intermediate\Build\Win64\SpaceShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"D:\Unreal Projects\SpaceShooter\Source\SpaceShooter\PlayerCharacter.cpp"
-/FI"D:\Unreal Projects\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\Definitions.SpaceShooter.h"
-/Fo"D:\Unreal Projects\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\PlayerCharacter.cpp.obj"
+/FI"D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\SpaceShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\SpaceShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\SpaceShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\PlayerCharacter.cpp"
+/FI"D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\Definitions.SpaceShooter.h"
+/Fo"D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\PlayerCharacter.cpp.obj"
 /TP
 /GR-
 /W4

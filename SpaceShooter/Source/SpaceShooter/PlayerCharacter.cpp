@@ -81,8 +81,6 @@ void APlayerCharacter::MoveForward(float inputValue)
 	{
 		//add player movement based off the current rotation and input from the player
 		AddMovementInput(FVector(UKismetMathLibrary::DegSin(-rotationValue), UKismetMathLibrary::DegCos(rotationValue), 0.0f), inputValue * movementSpeed);
-
-		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::FormatAsNumber(highScore));
 	}
 }
 
@@ -165,10 +163,10 @@ void APlayerCharacter::UpdateHealth(int updatedHealth_)
 		gameMode->UpdatePlayerStats(health, score, highScore);
 	}
 
-	//if the player has run out of health, kill the player
+	//if the player has run out of health, kill the player and open up the main menu
 	if (health <= 0)
 	{
-		UKismetSystemLibrary::QuitGame(GetWorld(), UGameplayStatics::GetPlayerController(GetWorld(), 0), EQuitPreference::Quit, true);
+		UGameplayStatics::OpenLevel(GetWorld(), "MainMenu");
 	}
 }
 
@@ -191,8 +189,6 @@ void APlayerCharacter::SaveHighScore()
 
 	if (saveHighScore != nullptr)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Not a nullptr!!")));
-
 		saveHighScore->SetHighScore(highScore);
 	}
 	UGameplayStatics::SaveGameToSlot(saveHighScore, FString("Slot1"), 0);
@@ -206,8 +202,6 @@ void APlayerCharacter::LoadHighScore()
 
 	if (UGameplayStatics::DoesSaveGameExist(FString("Slot1"), 0))
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("Save game loaded!")));
-
 		USaveScore* loadGameObj_ = Cast<USaveScore>(UGameplayStatics::LoadGameFromSlot(FString("Slot1"), 0));
 	
 		highScore = loadGameObj_->GetHighScore();
