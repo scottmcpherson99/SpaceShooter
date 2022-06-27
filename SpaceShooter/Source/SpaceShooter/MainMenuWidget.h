@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/Button.h"
+#include "Components/TextBlock.h"
 #include "MainMenuWidget.generated.h"
 
 /**
@@ -28,9 +29,38 @@ protected:
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 		class UButton* ExitGameButton;
 
+	//button that will choose the next level
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
+		class UButton* NextButton;
+
+	//button that will choose the previous level
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
+		class UButton* PreviousButton;
+
+	//level name
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+		class UTextBlock* LevelName;
+
+	//show the name of the level
+	void UpdateLevelName(FName name_);
+
 	//start a new game
 	UFUNCTION()
 		void OnExitGameClicked();
 
+	//choose the next level
+	UFUNCTION()
+		void OnNextLevelClicked();
+
+	//choose the previous level
+	UFUNCTION()
+		void OnPreviousLevelClicked();
+
 	virtual void NativeConstruct() override;
+	
+	//level names
+	FName levelNames[3] = { FName("OpenSpace"), FName("FourBoxes"), FName("Fortress") };
+
+	int levelIndex = 0;
+
 };

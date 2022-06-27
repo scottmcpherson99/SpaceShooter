@@ -13,7 +13,9 @@
 UENUM(BlueprintType)
 enum class EMainMenuWidget : uint8
 {
-	EMAINMENU UMETA(DisplayName = "MainMenu")
+	EOPENBOX UMETA(DisplayName = "OpenBox"),
+	EFOURBOXES UMETA(DisplayName = "FourBoxes"),
+	EFORTRESS UMETA(DisplayName = "Fortress")
 };
 
 UCLASS()
@@ -27,7 +29,7 @@ public:
 	virtual void BeginPlay() override;
 
 	//start the current level selected
-	void StartGame();
+	void StartGame(FName levelName_);
 
 	//widget class to use for our hud screen
 	UPROPERTY(EditAnywhere, Category = "Widget")
@@ -35,4 +37,7 @@ public:
 
 	UPROPERTY(VisibleInstanceOnly, Category = "Widget")
 		class UMainMenuWidget* mainMenuWidget;
+
+	//switch which map is being selected
+	void SwitchMapChoice(EMainMenuWidget mapChoice_);
 };

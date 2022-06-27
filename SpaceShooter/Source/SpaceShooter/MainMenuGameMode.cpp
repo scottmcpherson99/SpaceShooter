@@ -34,9 +34,32 @@ void AMainMenuGameMode::BeginPlay()
 			playerCharacter->DisableInput(playerController);
 		}
 	}
+
+
 }
 
-void AMainMenuGameMode::StartGame()
+void AMainMenuGameMode::StartGame(FName levelName_)
 {
-	UGameplayStatics::OpenLevel(GetWorld(), "GameLevel");
+	UGameplayStatics::OpenLevel(GetWorld(), levelName_);
+}
+
+void AMainMenuGameMode::SwitchMapChoice(EMainMenuWidget mapChoice_)
+{
+	switch (mapChoice_)
+	{
+		//switch the map to the open box map
+	case EMainMenuWidget::EOPENBOX :
+
+		break;
+
+		//switch the map to the four boxes map
+	case EMainMenuWidget::EFOURBOXES :
+
+		break;
+
+		//switch the map to the fortress map
+	case EMainMenuWidget::EFORTRESS :
+
+		break;
+	}
 }

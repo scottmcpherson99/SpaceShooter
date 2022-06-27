@@ -36,7 +36,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuGameMode() {}
 		return EMainMenuWidget_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EMainMenuWidget(EMainMenuWidget_StaticEnum, TEXT("/Script/SpaceShooter"), TEXT("EMainMenuWidget"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SpaceShooter_EMainMenuWidget_Hash() { return 3374066463U; }
+	uint32 Get_Z_Construct_UEnum_SpaceShooter_EMainMenuWidget_Hash() { return 3349284961U; }
 	UEnum* Z_Construct_UEnum_SpaceShooter_EMainMenuWidget()
 	{
 #if WITH_HOT_RELOAD
@@ -48,15 +48,23 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuGameMode() {}
 		if (!ReturnEnum)
 		{
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
-				{ "EMainMenuWidget::EMAINMENU", (int64)EMainMenuWidget::EMAINMENU },
+				{ "EMainMenuWidget::EOPENBOX", (int64)EMainMenuWidget::EOPENBOX },
+				{ "EMainMenuWidget::EFOURBOXES", (int64)EMainMenuWidget::EFOURBOXES },
+				{ "EMainMenuWidget::EFORTRESS", (int64)EMainMenuWidget::EFORTRESS },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
 				{ "Comment", "/**\n * \n */" },
-				{ "EMAINMENU.Comment", "/**\n * \n */" },
-				{ "EMAINMENU.DisplayName", "MainMenu" },
-				{ "EMAINMENU.Name", "EMainMenuWidget::EMAINMENU" },
+				{ "EFORTRESS.Comment", "/**\n * \n */" },
+				{ "EFORTRESS.DisplayName", "Fortress" },
+				{ "EFORTRESS.Name", "EMainMenuWidget::EFORTRESS" },
+				{ "EFOURBOXES.Comment", "/**\n * \n */" },
+				{ "EFOURBOXES.DisplayName", "FourBoxes" },
+				{ "EFOURBOXES.Name", "EMainMenuWidget::EFOURBOXES" },
+				{ "EOPENBOX.Comment", "/**\n * \n */" },
+				{ "EOPENBOX.DisplayName", "OpenBox" },
+				{ "EOPENBOX.Name", "EMainMenuWidget::EOPENBOX" },
 				{ "ModuleRelativePath", "MainMenuGameMode.h" },
 			};
 #endif
