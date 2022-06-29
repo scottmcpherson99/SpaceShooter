@@ -7,6 +7,7 @@
 #include "SaveScore.h"
 #include "Kismet/GameplayStatics.h"
 #include "GameScreenWidget.h"
+#include "Sound/SoundBase.h"
 
 ASpaceShooterGameMode::ASpaceShooterGameMode()
 {
@@ -26,6 +27,10 @@ void ASpaceShooterGameMode::BeginPlay()
 
 		savePlayerHighScore = Cast<USaveScore>(UGameplayStatics::CreateSaveGameObject(USaveScore::StaticClass()));
 	}
+
+	//play the background music on repeat
+	PlayMusic();
+	GetWorldTimerManager().SetTimer(musicTimer, this, &ASpaceShooterGameMode::PlayMusic, backgroundMusic->GetDuration(), true);
 }
 
 void ASpaceShooterGameMode::UpdatePlayerStats(int playerHealth_, int playerScore_, int playerHighScore_)
@@ -33,4 +38,13 @@ void ASpaceShooterGameMode::UpdatePlayerStats(int playerHealth_, int playerScore
 	gameWidget->UpdatePlayerScore(playerScore_);
 	gameWidget->UpdatePlayerHealth(playerHealth_);
 	gameWidget->UpdatePlayerHighScore(playerHighScore_);
+}
+
+void ASpaceShooterGameMode::PlayMusic()
+{
+	//play the background music
+	if (backgroundMusic != nullptr)
+	{
+		UGameplayStatics::PlaySound2D(GetWorld(), backgroundMusic);
+	}
 }

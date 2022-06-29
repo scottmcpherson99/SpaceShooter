@@ -6,6 +6,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "MainMenuWidget.h"
 #include "PlayerCharacter.h"
+#include "Sound/SoundBase.h"
 
 AMainMenuGameMode::AMainMenuGameMode()
 {
@@ -36,6 +37,9 @@ void AMainMenuGameMode::BeginPlay()
 	}
 
 
+	//play the background music on repeat
+	PlayMusic();
+	GetWorldTimerManager().SetTimer(musicTimer, this, &AMainMenuGameMode::PlayMusic, backgroundMusic->GetDuration(), true);
 }
 
 void AMainMenuGameMode::StartGame(FName levelName_)
@@ -61,5 +65,14 @@ void AMainMenuGameMode::SwitchMapChoice(EMainMenuWidget mapChoice_)
 	case EMainMenuWidget::EFORTRESS :
 
 		break;
+	}
+}
+
+void AMainMenuGameMode::PlayMusic()
+{
+	//play the background music
+	if (backgroundMusic != nullptr)
+	{
+		UGameplayStatics::PlaySound2D(GetWorld(), backgroundMusic);
 	}
 }

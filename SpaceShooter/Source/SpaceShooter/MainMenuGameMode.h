@@ -40,4 +40,14 @@ public:
 
 	//switch which map is being selected
 	void SwitchMapChoice(EMainMenuWidget mapChoice_);
+
+	//background music
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Sound)
+		class USoundBase* backgroundMusic;
+
+	//timer to repeat the music
+	FTimerHandle musicTimer;
+
+	//play the background music
+	void PlayMusic();
 };

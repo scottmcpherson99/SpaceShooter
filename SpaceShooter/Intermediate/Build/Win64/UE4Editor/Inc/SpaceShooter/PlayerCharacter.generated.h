@@ -63,7 +63,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerCharacter); \
 	FORCEINLINE static uint32 __PPO__SideViewCameraComponent() { return STRUCT_OFFSET(APlayerCharacter, SideViewCameraComponent); } \
 	FORCEINLINE static uint32 __PPO__rotationSpeed() { return STRUCT_OFFSET(APlayerCharacter, rotationSpeed); } \
 	FORCEINLINE static uint32 __PPO__movementSpeed() { return STRUCT_OFFSET(APlayerCharacter, movementSpeed); } \
-	FORCEINLINE static uint32 __PPO__rotationValue() { return STRUCT_OFFSET(APlayerCharacter, rotationValue); }
+	FORCEINLINE static uint32 __PPO__rotationValue() { return STRUCT_OFFSET(APlayerCharacter, rotationValue); } \
+	FORCEINLINE static uint32 __PPO__shootSound() { return STRUCT_OFFSET(APlayerCharacter, shootSound); }
 
 
 #define SpaceShooter_Source_SpaceShooter_PlayerCharacter_h_13_PROLOG

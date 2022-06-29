@@ -13,6 +13,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "Sound/SoundBase.h"
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -124,6 +125,12 @@ void APlayerCharacter::Shoot()
 		if (playerBullet != nullptr)
 		{
 			world->SpawnActor<APlayerBullet>(playerBullet, BulletSpawnerVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+		}
+
+		//play the shooting sound when the player shoots
+		if (shootSound != nullptr)
+		{
+			UGameplayStatics::PlaySound2D(world, shootSound);
 		}
 	}
 }

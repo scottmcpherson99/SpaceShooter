@@ -71,7 +71,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AEnemyCharacter); \
 
 #define SpaceShooter_Source_SpaceShooter_EnemyCharacter_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__enemyMesh() { return STRUCT_OFFSET(AEnemyCharacter, enemyMesh); } \
-	FORCEINLINE static uint32 __PPO__TriggerBox() { return STRUCT_OFFSET(AEnemyCharacter, TriggerBox); }
+	FORCEINLINE static uint32 __PPO__TriggerBox() { return STRUCT_OFFSET(AEnemyCharacter, TriggerBox); } \
+	FORCEINLINE static uint32 __PPO__explosionSound() { return STRUCT_OFFSET(AEnemyCharacter, explosionSound); }
 
 
 #define SpaceShooter_Source_SpaceShooter_EnemyCharacter_h_12_PROLOG

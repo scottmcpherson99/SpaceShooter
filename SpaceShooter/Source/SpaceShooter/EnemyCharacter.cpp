@@ -8,6 +8,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Components/BoxComponent.h"
+#include "Sound/SoundBase.h"
 
 AEnemyCharacter::AEnemyCharacter()
 {
@@ -39,6 +40,11 @@ void AEnemyCharacter::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedCompone
 	//if the colliding actor is the player, destoy the enemy and take a life off the player
 	if (playerCharacter != nullptr)
 	{
+		//play the explosion sound when the enemy collides with the player
+		if (explosionSound != nullptr)
+		{
+			UGameplayStatics::PlaySound2D(GetWorld(), explosionSound);
+		}
 		playerCharacter->UpdateHealth(-1);
 		Destroy();
 	}

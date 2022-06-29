@@ -90,6 +90,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		float rotationValue;
 
+	//shooting sound
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Sound)
+		class USoundBase* shootSound;
+
 private:
 	//player values
 	int score;

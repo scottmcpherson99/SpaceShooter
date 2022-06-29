@@ -61,7 +61,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASpaceShooterGameMode); \
 #define SpaceShooter_Source_SpaceShooter_SpaceShooterGameMode_h_17_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__GameScreenWidget() { return STRUCT_OFFSET(ASpaceShooterGameMode, GameScreenWidget); } \
 	FORCEINLINE static uint32 __PPO__gameWidget() { return STRUCT_OFFSET(ASpaceShooterGameMode, gameWidget); } \
-	FORCEINLINE static uint32 __PPO__saveState() { return STRUCT_OFFSET(ASpaceShooterGameMode, saveState); }
+	FORCEINLINE static uint32 __PPO__saveState() { return STRUCT_OFFSET(ASpaceShooterGameMode, saveState); } \
+	FORCEINLINE static uint32 __PPO__backgroundMusic() { return STRUCT_OFFSET(ASpaceShooterGameMode, backgroundMusic); }
 
 
 #define SpaceShooter_Source_SpaceShooter_SpaceShooterGameMode_h_14_PROLOG
