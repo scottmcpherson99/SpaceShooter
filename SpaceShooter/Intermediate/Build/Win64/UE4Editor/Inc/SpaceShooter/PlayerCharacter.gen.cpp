@@ -13,10 +13,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 // Cross Module References
+	SPACESHOOTER_API UEnum* Z_Construct_UEnum_SpaceShooter_EPlayerPowerup();
+	UPackage* Z_Construct_UPackage__Script_SpaceShooter();
 	SPACESHOOTER_API UClass* Z_Construct_UClass_APlayerCharacter_NoRegister();
 	SPACESHOOTER_API UClass* Z_Construct_UClass_APlayerCharacter();
 	PAPER2D_API UClass* Z_Construct_UClass_APaperCharacter();
-	UPackage* Z_Construct_UPackage__Script_SpaceShooter();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperSpriteComponent_NoRegister();
@@ -25,6 +26,62 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 	SPACESHOOTER_API UClass* Z_Construct_UClass_USaveScore_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 // End Cross Module References
+	static UEnum* EPlayerPowerup_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_SpaceShooter_EPlayerPowerup, Z_Construct_UPackage__Script_SpaceShooter(), TEXT("EPlayerPowerup"));
+		}
+		return Singleton;
+	}
+	template<> SPACESHOOTER_API UEnum* StaticEnum<EPlayerPowerup>()
+	{
+		return EPlayerPowerup_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EPlayerPowerup(EPlayerPowerup_StaticEnum, TEXT("/Script/SpaceShooter"), TEXT("EPlayerPowerup"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_SpaceShooter_EPlayerPowerup_Hash() { return 2506867238U; }
+	UEnum* Z_Construct_UEnum_SpaceShooter_EPlayerPowerup()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_SpaceShooter();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EPlayerPowerup"), 0, Get_Z_Construct_UEnum_SpaceShooter_EPlayerPowerup_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "EPlayerPowerup::ENOPOWERUP", (int64)EPlayerPowerup::ENOPOWERUP },
+				{ "EPlayerPowerup::ESPEEDBOOST", (int64)EPlayerPowerup::ESPEEDBOOST },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "BlueprintType", "true" },
+				{ "ENOPOWERUP.DisplayName", "NoPowerup" },
+				{ "ENOPOWERUP.Name", "EPlayerPowerup::ENOPOWERUP" },
+				{ "ESPEEDBOOST.DisplayName", "SpeedBoost" },
+				{ "ESPEEDBOOST.Name", "EPlayerPowerup::ESPEEDBOOST" },
+				{ "ModuleRelativePath", "PlayerCharacter.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_SpaceShooter,
+				nullptr,
+				"EPlayerPowerup",
+				"EPlayerPowerup",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	void APlayerCharacter::StaticRegisterNativesAPlayerCharacter()
 	{
 	}

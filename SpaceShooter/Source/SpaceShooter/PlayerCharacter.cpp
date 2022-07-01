@@ -55,7 +55,12 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	LoadHighScore();
+
+	//set the original speeds
+	originalMovementSpeed = movementSpeed;
+	originalRotationSpeed = rotationSpeed;
 }
+
 /// //////////////////////////////////////////////////////////////////////
 /// Input
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -69,12 +74,26 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAxis("Rotate", this, &APlayerCharacter::Rotate);
 
 }
-
-
 /// //////////////////////////////////////////////////////////////////////
 
-
 /// //////////////////////////////////////////////////////////////////////
+/// Powerup
+void APlayerCharacter::choosePowerup(EPlayerPowerup powerup_)
+{
+	switch (powerup_)
+	{
+	case EPlayerPowerup::ENOPOWERUP:
+		movementSpeed = originalMovementSpeed;
+		rotationSpeed = originalRotationSpeed;
+		break;
+
+	case EPlayerPowerup::ESPEEDBOOST:
+		movementSpeed *= 1.5;
+		rotationSpeed *= 1.5;
+	}
+}
+/// //////////////////////////////////////////////////////////////////////
+
 /// Player Movement
 void APlayerCharacter::MoveForward(float inputValue)
 {
@@ -200,7 +219,6 @@ void APlayerCharacter::SaveHighScore()
 	}
 	UGameplayStatics::SaveGameToSlot(saveHighScore, FString("Slot1"), 0);
 }
-
 
 void APlayerCharacter::LoadHighScore()
 {

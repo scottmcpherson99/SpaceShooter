@@ -7,6 +7,13 @@
 #include "GameFramework/SaveGame.h"
 #include "PlayerCharacter.generated.h"
 
+UENUM(BlueprintType)
+enum class EPlayerPowerup : uint8
+{
+	ENOPOWERUP UMETA(DisplayName = "NoPowerup"),
+	ESPEEDBOOST UMETA(DisplayName = "SpeedBoost")
+};
+
 /**
  * 
  */
@@ -50,6 +57,9 @@ public:
 	//update the players health
 	void UpdateHealth(int updatedHealth_);
 
+	//choose the new player powerup
+	void choosePowerup(EPlayerPowerup powerup_);
+
 	//recieve the players score
 	int GetPlayerScore();
 
@@ -78,13 +88,20 @@ protected:
 	//save the new high score for the level
 	void SaveHighScore();
 
+
 	//controls the speed at which the player can rotate
 	UPROPERTY(EditAnywhere, meta = (UIMin = 0.5, UIMax = 2), Category = movement)
 		float rotationSpeed;
 
+	//the original rotation rate of the player
+	float originalRotationSpeed;
+
 	//controls the speed at which the player can move
 	UPROPERTY(EditAnywhere, meta = (UIMin = 0.5, UIMax = 2), Category = movement)
 		float movementSpeed;
+
+	//the original movement speed of the player
+		float originalMovementSpeed;
 
 	//the value of which the players roll value is facing
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
