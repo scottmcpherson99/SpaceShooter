@@ -9,6 +9,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Components/BoxComponent.h"
 #include "Sound/SoundBase.h"
+#include "Powerup.h"
 
 AEnemyCharacter::AEnemyCharacter()
 {
@@ -46,6 +47,7 @@ void AEnemyCharacter::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedCompone
 			UGameplayStatics::PlaySound2D(GetWorld(), explosionSound);
 		}
 		playerCharacter->UpdateHealth(-1);
+
 		Destroy();
 	}
 }

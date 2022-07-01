@@ -48,6 +48,7 @@ void APowerup::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AAc
 			UGameplayStatics::PlaySound2D(GetWorld(), collectionSound);
 			playerCharacter->choosePowerup(EPlayerPowerup::ESPEEDBOOST);
 		}
+
 		Destroy();
 	}
 }

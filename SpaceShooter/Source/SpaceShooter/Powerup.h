@@ -38,6 +38,7 @@ protected:
 	//collection sound
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Sound)
 		class USoundBase* collectionSound;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

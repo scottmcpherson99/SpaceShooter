@@ -69,7 +69,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerBullet); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(APlayerBullet)
 
 
-#define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_PRIVATE_PROPERTY_OFFSET
+#define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__powerup() { return STRUCT_OFFSET(APlayerBullet, powerup); }
+
+
 #define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_12_PROLOG
 #define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

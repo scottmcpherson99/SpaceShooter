@@ -88,8 +88,8 @@ void APlayerCharacter::choosePowerup(EPlayerPowerup powerup_)
 		break;
 
 	case EPlayerPowerup::ESPEEDBOOST:
-		movementSpeed *= 1.5;
-		rotationSpeed *= 1.5;
+		movementSpeed = 1.5 * originalMovementSpeed;
+		rotationSpeed = 1.5 * originalRotationSpeed;
 	}
 }
 /// //////////////////////////////////////////////////////////////////////

@@ -1151,3 +1151,635 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.07.01-22.01.33:234][301]Display: HotReload successful (9 functions remapped  0 scriptstructs remapped)
 [2022.07.01-22.01.33:293][301]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0070 seconds. Added 3617 classes and 861 folders.
 [2022.07.01-22.01.33:297][301]Display: HotReload took  0.1s.
+[2022.07.01-22.14.55:354][796]Candidate modules for hot reload:
+[2022.07.01-22.14.55:354][796]  SpaceShooter
+[2022.07.01-22.14.55:354][796]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=SpaceShooter,2950 SpaceShooterEditor Win64 Development -Project="D:/Unreal Projects/SpaceShooter_/SpaceShooter/SpaceShooter.uproject" "D:/Unreal Projects/SpaceShooter_/SpaceShooter/SpaceShooter.uproject"  -IgnoreJunk]
+[2022.07.01-22.14.55:355][796]Warning: Starting HotReload took  0.0s.
+[2022.07.01-22.14.56:605][885]CompilerResultsLog: New page: Compilation - 2 Jul 2022, 00:14:56
+[2022.07.01-22.14.56:605][885]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Projects\SpaceShooter_).
+[2022.07.01-22.14.56:605][885]CompilerResultsLog: Building SpaceShooterEditor...
+[2022.07.01-22.14.56:605][885]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.07.01-22.14.56:605][885]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:   [1/4] EnemyCharacter.cpp
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:    C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Templates/PointerIsConvertibleFromTo.h(19) : error C2027: use of undefined type 'APlayerBullet'
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:   D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\PlayerCharacter.h(43): note: see declaration of 'APlayerBullet'
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:   C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Templates/PointerIsConvertibleFromTo.h(60): note: see reference to class template instantiation 'UE4PointerIsConvertibleFromTo_Private::TImpl<From,To,APlayerBullet,UObject>' being compiled
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           with
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           [
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:               From=APlayerBullet,
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:               To=volatile const UObject
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           ]
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:   C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\Templates/Casts.h(276): note: see reference to class template instantiation 'TPointerIsConvertibleFromTo<T,volatile const UObject>' being compiled
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           with
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           [
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:               T=APlayerBullet
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           ]
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:   C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/World.h(3112): note: see reference to function template instantiation 'To *CastChecked<T,AActor>(From *,ECastCheckedType::Type)' being compiled
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           with
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           [
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:               To=APlayerBullet,
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:               T=APlayerBullet,
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:               From=AActor
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           ]
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:   D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\EnemyCharacter.cpp(68): note: see reference to function template instantiation 'T *UWorld::SpawnActor<APlayerBullet>(UClass *,const FVector &,const FRotator &,const FActorSpawnParameters &)' being compiled
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           with
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           [
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:               T=APlayerBullet
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:           ]
+[2022.07.01-22.14.56:605][885]CompilerResultsLog:    C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Templates/PointerIsConvertibleFromTo.h(19) : error C2338: TPointerIsConvertibleFromTo must not be instantiated with incomplete types
+[2022.07.01-22.14.56:605][885]LogMainFrame: MainFrame: Module compiling took 1.255 seconds
+[2022.07.01-22.14.56:614][885]Warning: HotReload failed, recompile failed
+[2022.07.01-22.18.44:864][127]LogSlate: Window 'Message Log' being destroyed
+[2022.07.01-22.18.44:867][127]LogSlate: Window 'Message Log' being destroyed
+[2022.07.01-22.18.45:856][237]Candidate modules for hot reload:
+[2022.07.01-22.18.45:856][237]  SpaceShooter
+[2022.07.01-22.18.45:856][237]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=SpaceShooter,5037 SpaceShooterEditor Win64 Development -Project="D:/Unreal Projects/SpaceShooter_/SpaceShooter/SpaceShooter.uproject" "D:/Unreal Projects/SpaceShooter_/SpaceShooter/SpaceShooter.uproject"  -IgnoreJunk]
+[2022.07.01-22.18.45:858][237]Warning: Starting HotReload took  0.0s.
+[2022.07.01-22.18.47:052][315]CompilerResultsLog: New page: Compilation - 2 Jul 2022, 00:18:47
+[2022.07.01-22.18.47:052][315]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Projects\SpaceShooter_).
+[2022.07.01-22.18.47:052][315]CompilerResultsLog: Building SpaceShooterEditor...
+[2022.07.01-22.18.47:052][315]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.07.01-22.18.47:052][315]CompilerResultsLog: Building 4 actions with 16 processes...
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:   [1/4] EnemyCharacter.cpp
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:    C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Templates/PointerIsConvertibleFromTo.h(19) : error C2027: use of undefined type 'APlayerBullet'
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:   D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\PlayerCharacter.h(43): note: see declaration of 'APlayerBullet'
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:   C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Templates/PointerIsConvertibleFromTo.h(60): note: see reference to class template instantiation 'UE4PointerIsConvertibleFromTo_Private::TImpl<From,To,APlayerBullet,UObject>' being compiled
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:           with
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:           [
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:               From=APlayerBullet,
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:               To=volatile const UObject
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:           ]
+[2022.07.01-22.18.47:052][315]CompilerResultsLog:   C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\Templates/Casts.h(276): note: see reference to class template instantiation 'TPointerIsConvertibleFromTo<T,volatile const UObject>' being compiled
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:           with
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:           [
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:               T=APlayerBullet
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:           ]
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:   C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/World.h(3112): note: see reference to function template instantiation 'To *CastChecked<T,AActor>(From *,ECastCheckedType::Type)' being compiled
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:           with
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:           [
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:               To=APlayerBullet,
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:               T=APlayerBullet,
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:               From=AActor
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:           ]
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:   D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\EnemyCharacter.cpp(68): note: see reference to function template instantiation 'T *UWorld::SpawnActor<APlayerBullet>(UClass *,const FVector &,const FRotator &,const FActorSpawnParameters &)' being compiled
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:           with
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:           [
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:               T=APlayerBullet
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:           ]
+[2022.07.01-22.18.47:053][315]CompilerResultsLog:    C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Templates/PointerIsConvertibleFromTo.h(19) : error C2338: TPointerIsConvertibleFromTo must not be instantiated with incomplete types
+[2022.07.01-22.18.47:053][315]LogMainFrame: MainFrame: Module compiling took 1.199 seconds
+[2022.07.01-22.18.47:053][315]Warning: HotReload failed, recompile failed
+[2022.07.01-22.19.01:086][968]LogSlate: Window 'Message Log' being destroyed
+[2022.07.01-22.19.01:089][968]LogSlate: Window 'Message Log' being destroyed
+[2022.07.01-22.25.02:159][275]Candidate modules for hot reload:
+[2022.07.01-22.25.02:159][275]  SpaceShooter
+[2022.07.01-22.25.02:159][275]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=SpaceShooter,6679 SpaceShooterEditor Win64 Development -Project="D:/Unreal Projects/SpaceShooter_/SpaceShooter/SpaceShooter.uproject" "D:/Unreal Projects/SpaceShooter_/SpaceShooter/SpaceShooter.uproject"  -IgnoreJunk]
+[2022.07.01-22.25.02:160][275]Warning: Starting HotReload took  0.0s.
+[2022.07.01-22.25.03:438][375]CompilerResultsLog: New page: Compilation - 2 Jul 2022, 00:25:03
+[2022.07.01-22.25.03:438][375]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Unreal Projects\SpaceShooter_).
+[2022.07.01-22.25.03:439][375]CompilerResultsLog: Building SpaceShooterEditor...
+[2022.07.01-22.25.03:439][375]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.07.01-22.25.03:439][375]CompilerResultsLog: Building 3 actions with 16 processes...
+[2022.07.01-22.25.03:439][375]CompilerResultsLog:   [1/3] UE4Editor-SpaceShooter-6679.lib
+[2022.07.01-22.25.03:439][375]CompilerResultsLog:      Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-6679.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-6679.exp
+[2022.07.01-22.25.03:439][375]CompilerResultsLog:   [2/3] UE4Editor-SpaceShooter-6679.dll
+[2022.07.01-22.25.03:439][375]CompilerResultsLog:      Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-6679.suppressed.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-6679.suppressed.exp
+[2022.07.01-22.25.03:439][375]CompilerResultsLog:   [3/3] SpaceShooterEditor.target
+[2022.07.01-22.25.03:439][375]CompilerResultsLog: Total time in Parallel executor: 0.70 seconds
+[2022.07.01-22.25.03:439][375]CompilerResultsLog: Total execution time: 1.23 seconds
+[2022.07.01-22.25.03:439][375]LogMainFrame: MainFrame: Module compiling took 1.282 seconds
+[2022.07.01-22.25.03:479][375]LogClass: Could not find existing class EnemyCharacter in package /Script/SpaceShooter for HotReload, assuming new class
+[2022.07.01-22.25.03:479][375]LogClass: Function OnTriggerBoxOverlap is new.
+[2022.07.01-22.25.03:499][375]LogClass: EMainMenuWidget HotReload.
+[2022.07.01-22.25.03:499][375]LogClass: EPlayerPowerup HotReload.
+[2022.07.01-22.25.03:506][375]LogHotReload: Re-instancing EnemyCharacter after hot-reload.
+[2022.07.01-22.25.03:530][375]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SpaceShooter' in 0.0002 seconds. Added 16 classes and 2 folders.
+[2022.07.01-22.25.03:534][375]Display: HotReload successful (8 functions remapped  0 scriptstructs remapped)
+[2022.07.01-22.25.03:615][375]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0063 seconds. Added 3617 classes and 861 folders.
+[2022.07.01-22.25.03:615][375]Display: HotReload took  1.5s.
+[2022.07.01-22.25.04:743][476]LogTemp: Repeating last play command: Selected Viewport
+[2022.07.01-22.25.04:747][476]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.07.01-22.25.04:747][476]PIE: New page: PIE session: MainMenu (2 Jul 2022, 00:25:04)
+[2022.07.01-22.25.04:771][476]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.25.04:772][476]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000808s)
+[2022.07.01-22.25.04:773][476]LogAIModule: Creating AISystem for world MainMenu
+[2022.07.01-22.25.04:773][476]LogPlayLevel: PIE: World Init took: (0.001221s)
+[2022.07.01-22.25.04:773][476]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.002161s)
+[2022.07.01-22.25.04:844][476]LogUObjectHash: Compacting FUObjectHashTables data took   3.22ms
+[2022.07.01-22.25.04:846][476]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2022.07.01-22.25.04:846][476]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.07.01-22.25.04:846][476]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.07.01-22.25.04:846][476]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.07.01-22.25.04:846][476]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.07.01-22.25.04:846][476]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.07.01-22.25.04:846][476]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.07.01-22.25.04:846][476]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.07.01-22.25.04:846][476]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.07.01-22.25.04:846][476]LogAudio: Display: Using built-in audio occlusion.
+[2022.07.01-22.25.04:846][476]LogAudioMixer: Display: Initializing audio mixer.
+[2022.07.01-22.25.04:859][476]LogAudioMixer: Display: 0: FrontLeft
+[2022.07.01-22.25.04:859][476]LogAudioMixer: Display: 1: FrontRight
+[2022.07.01-22.25.04:866][476]LogAudioMixer: Display: Using Audio Device Acer GR235H (NVIDIA High Definition Audio)
+[2022.07.01-22.25.04:866][476]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.07.01-22.25.04:866][476]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.07.01-22.25.04:866][476]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.07.01-22.25.04:866][476]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.07.01-22.25.04:866][476]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.07.01-22.25.04:866][476]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.07.01-22.25.04:876][476]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.07.01-22.25.04:876][476]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.07.01-22.25.04:876][476]LogInit: FAudioDevice initialized.
+[2022.07.01-22.25.04:876][476]LogAudio: Display: Audio Device (ID: 6) registered with world 'MainMenu'.
+[2022.07.01-22.25.04:882][476]LogLoad: Game class is 'BP_MainMenuGameMode_C'
+[2022.07.01-22.25.04:883][476]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2022.07.01-23.25.04
+[2022.07.01-22.25.04:883][476]LogWorld: Bringing up level for play took: 0.000281
+[2022.07.01-22.25.04:883][476]LogOnline: OSS: Creating online subsystem instance for: :Context_6
+[2022.07.01-22.25.04:884][476]PIE: Server logged in
+[2022.07.01-22.25.04:885][476]PIE: Play in editor total start time 0.138 seconds.
+[2022.07.01-22.25.05:894][585]LogNet: Browse: /Game/Levels/OpenSpace
+[2022.07.01-22.25.05:894][585]LogLoad: LoadMap: /Game/Levels/OpenSpace
+[2022.07.01-22.25.05:894][585]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.25.05:894][585]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.25.05:894][585]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.25.05:938][585]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.25.05:977][585]LogUObjectHash: Compacting FUObjectHashTables data took   1.65ms
+[2022.07.01-22.25.06:019][585]LogAudio: Display: Audio Device (ID: 6) registered with world 'OpenSpace'.
+[2022.07.01-22.25.06:020][585]LogAIModule: Creating AISystem for world OpenSpace
+[2022.07.01-22.25.06:020][585]LogLoad: Game class is 'BP_SpaceShooterGameMode_C'
+[2022.07.01-22.25.06:023][585]LogWorld: Bringing World /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace up for play (max tick rate 0) at 2022.07.01-23.25.06
+[2022.07.01-22.25.06:023][585]LogWorld: Bringing up level for play took: 0.002461
+[2022.07.01-22.25.06:023][585]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2022.07.01-22.25.06:106][585]LogLoad: Took 0.211548 seconds to LoadMap(/Game/Levels/OpenSpace)
+[2022.07.01-22.25.10:612][112]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.25.10:612][112]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_OpenSpace
+[2022.07.01-22.25.10:612][112]LogWorld: UWorld::CleanupWorld for OpenSpace, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.25.10:613][112]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.25.10:620][112]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.07.01-22.25.10:622][112]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.25.10:630][112]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.25.10:630][112]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.25.10:631][112]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.25.10:641][112]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.25.10:642][112]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2022.07.01-22.25.10:684][115]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2022.07.01-22.25.32:531][561]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Enemy/BP_EnemyCharacter.BP_EnemyCharacter
+[2022.07.01-22.25.43:027][712]LogVSAccessor: Warning: Couldn't goto line number '1' in 'D:/Unreal Projects/SpaceShooter_/SpaceShooter/Source/SpaceShooter/EnemyCharacter.h'
+[2022.07.01-22.25.57:565][852]BlueprintLog: New page: Compile BP_EnemyCharacter
+[2022.07.01-22.25.57:630][852]LogUObjectHash: Compacting FUObjectHashTables data took   1.93ms
+[2022.07.01-22.25.58:278][893]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Enemy/BP_EnemyCharacter" FILE="D:/Unreal Projects/SpaceShooter_/SpaceShooter/Content/Enemy/BP_EnemyCharacter.uasset" SILENT=true
+[2022.07.01-22.25.58:280][893]LogSavePackage: Moving 'D:/Unreal Projects/SpaceShooter_/SpaceShooter/Saved/BP_EnemyCharacter3B9DFE384CDC90B95C5F62AA62FA66DE.tmp' to 'D:/Unreal Projects/SpaceShooter_/SpaceShooter/Content/Enemy/BP_EnemyCharacter.uasset'
+[2022.07.01-22.25.58:427][893]AssetCheck: New page: Asset Save: BP_EnemyCharacter
+[2022.07.01-22.25.58:427][893]LogContentValidation: Display: Validating Blueprint /Game/Enemy/BP_EnemyCharacter.BP_EnemyCharacter
+[2022.07.01-22.26.00:511][ 97]LogSlate: Window 'BP_EnemyCharacter' being destroyed
+[2022.07.01-22.26.00:516][ 97]LogSlate: Window 'BP_EnemyCharacter' being destroyed
+[2022.07.01-22.26.00:547][ 97]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.26.00:547][ 97]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.26.01:459][182]LogTemp: Repeating last play command: Selected Viewport
+[2022.07.01-22.26.01:463][182]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.07.01-22.26.01:463][182]PIE: New page: PIE session: MainMenu (2 Jul 2022, 00:26:01)
+[2022.07.01-22.26.01:463][182]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.26.01:464][182]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000699s)
+[2022.07.01-22.26.01:464][182]LogAIModule: Creating AISystem for world MainMenu
+[2022.07.01-22.26.01:464][182]LogPlayLevel: PIE: World Init took: (0.000577s)
+[2022.07.01-22.26.01:464][182]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.001339s)
+[2022.07.01-22.26.01:498][182]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2022.07.01-22.26.01:499][182]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2022.07.01-22.26.01:499][182]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.07.01-22.26.01:499][182]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.07.01-22.26.01:499][182]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.07.01-22.26.01:499][182]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.07.01-22.26.01:499][182]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.07.01-22.26.01:499][182]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.07.01-22.26.01:499][182]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.07.01-22.26.01:499][182]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.07.01-22.26.01:499][182]LogAudio: Display: Using built-in audio occlusion.
+[2022.07.01-22.26.01:499][182]LogAudioMixer: Display: Initializing audio mixer.
+[2022.07.01-22.26.01:501][182]LogAudioMixer: Display: 0: FrontLeft
+[2022.07.01-22.26.01:501][182]LogAudioMixer: Display: 1: FrontRight
+[2022.07.01-22.26.01:506][182]LogAudioMixer: Display: Using Audio Device Acer GR235H (NVIDIA High Definition Audio)
+[2022.07.01-22.26.01:506][182]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.07.01-22.26.01:506][182]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.07.01-22.26.01:506][182]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.07.01-22.26.01:507][182]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.07.01-22.26.01:507][182]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.07.01-22.26.01:507][182]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.07.01-22.26.01:507][182]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.07.01-22.26.01:507][182]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.07.01-22.26.01:507][182]LogInit: FAudioDevice initialized.
+[2022.07.01-22.26.01:507][182]LogAudio: Display: Audio Device (ID: 7) registered with world 'MainMenu'.
+[2022.07.01-22.26.01:520][182]LogLoad: Game class is 'BP_MainMenuGameMode_C'
+[2022.07.01-22.26.01:521][182]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2022.07.01-23.26.01
+[2022.07.01-22.26.01:521][182]LogWorld: Bringing up level for play took: 0.000266
+[2022.07.01-22.26.01:521][182]LogOnline: OSS: Creating online subsystem instance for: :Context_8
+[2022.07.01-22.26.01:523][182]PIE: Server logged in
+[2022.07.01-22.26.01:523][182]PIE: Play in editor total start time 0.06 seconds.
+[2022.07.01-22.26.02:294][268]LogNet: Browse: /Game/Levels/OpenSpace
+[2022.07.01-22.26.02:294][268]LogLoad: LoadMap: /Game/Levels/OpenSpace
+[2022.07.01-22.26.02:294][268]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.26.02:294][268]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.26.02:294][268]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.26.02:337][268]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.26.02:339][268]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2022.07.01-22.26.02:345][268]LogAudio: Display: Audio Device (ID: 7) registered with world 'OpenSpace'.
+[2022.07.01-22.26.02:345][268]LogAIModule: Creating AISystem for world OpenSpace
+[2022.07.01-22.26.02:345][268]LogLoad: Game class is 'BP_SpaceShooterGameMode_C'
+[2022.07.01-22.26.02:348][268]LogWorld: Bringing World /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace up for play (max tick rate 0) at 2022.07.01-23.26.02
+[2022.07.01-22.26.02:348][268]LogWorld: Bringing up level for play took: 0.002326
+[2022.07.01-22.26.02:349][268]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2022.07.01-22.26.02:350][268]LogLoad: Took 0.055518 seconds to LoadMap(/Game/Levels/OpenSpace)
+[2022.07.01-22.26.26:408][150]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.26.26:408][150]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_OpenSpace
+[2022.07.01-22.26.26:408][150]LogWorld: UWorld::CleanupWorld for OpenSpace, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.26.26:409][150]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.26.26:414][150]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.07.01-22.26.26:416][150]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.26.26:426][150]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.26.26:426][150]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.26.26:427][150]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.26.26:437][150]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.26.26:439][150]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2022.07.01-22.26.26:476][152]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2022.07.01-22.34.10:429][725]LogHotReload: New module detected: UE4Editor-SpaceShooter-0023.dll
+[2022.07.01-22.34.10:772][727]LogHotReload: Starting Hot-Reload from IDE
+[2022.07.01-22.34.10:846][727]LogClass: Could not find existing class EnemyCharacter in package /Script/SpaceShooter for HotReload, assuming new class
+[2022.07.01-22.34.10:846][727]LogClass: Function OnTriggerBoxOverlap is new.
+[2022.07.01-22.34.10:851][727]LogClass: Could not find existing class Powerup in package /Script/SpaceShooter for HotReload, assuming new class
+[2022.07.01-22.34.10:852][727]LogClass: Function OnTriggerBoxOverlap is new.
+[2022.07.01-22.34.10:855][727]LogClass: EMainMenuWidget HotReload.
+[2022.07.01-22.34.10:855][727]LogClass: EPlayerPowerup HotReload.
+[2022.07.01-22.34.10:862][727]LogHotReload: Re-instancing EnemyCharacter after hot-reload.
+[2022.07.01-22.34.10:884][727]LogHotReload: Re-instancing Powerup after hot-reload.
+[2022.07.01-22.34.10:896][727]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SpaceShooter' in 0.0002 seconds. Added 16 classes and 2 folders.
+[2022.07.01-22.34.10:898][727]Display: HotReload successful (7 functions remapped  0 scriptstructs remapped)
+[2022.07.01-22.34.10:954][727]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0077 seconds. Added 3617 classes and 861 folders.
+[2022.07.01-22.34.10:956][727]Display: HotReload took  0.2s.
+[2022.07.01-22.39.21:062][654]LogHotReload: New module detected: UE4Editor-SpaceShooter-0025.dll
+[2022.07.01-22.39.21:742][657]LogHotReload: Starting Hot-Reload from IDE
+[2022.07.01-22.39.21:788][657]LogClass: Could not find existing class PlayerBullet in package /Script/SpaceShooter for HotReload, assuming new class
+[2022.07.01-22.39.21:788][657]LogClass: Function OnTriggerBoxOverlap is new.
+[2022.07.01-22.39.21:789][657]LogClass: Could not find existing class Powerup in package /Script/SpaceShooter for HotReload, assuming new class
+[2022.07.01-22.39.21:790][657]LogClass: Function OnTriggerBoxOverlap is new.
+[2022.07.01-22.39.21:795][657]LogClass: EMainMenuWidget HotReload.
+[2022.07.01-22.39.21:795][657]LogClass: EPlayerPowerup HotReload.
+[2022.07.01-22.39.21:804][657]LogHotReload: Re-instancing PlayerBullet after hot-reload.
+[2022.07.01-22.39.21:825][657]LogHotReload: Re-instancing Powerup after hot-reload.
+[2022.07.01-22.39.21:840][657]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SpaceShooter' in 0.0002 seconds. Added 16 classes and 2 folders.
+[2022.07.01-22.39.21:843][657]Display: HotReload successful (7 functions remapped  0 scriptstructs remapped)
+[2022.07.01-22.39.21:915][657]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0072 seconds. Added 3617 classes and 861 folders.
+[2022.07.01-22.39.21:920][657]Display: HotReload took  0.2s.
+[2022.07.01-22.39.26:028][719]LogTemp: Repeating last play command: Selected Viewport
+[2022.07.01-22.39.26:032][719]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.07.01-22.39.26:032][719]PIE: New page: PIE session: MainMenu (2 Jul 2022, 00:39:26)
+[2022.07.01-22.39.26:072][719]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.39.26:073][719]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000894s)
+[2022.07.01-22.39.26:073][719]LogAIModule: Creating AISystem for world MainMenu
+[2022.07.01-22.39.26:074][719]LogPlayLevel: PIE: World Init took: (0.000844s)
+[2022.07.01-22.39.26:074][719]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.001884s)
+[2022.07.01-22.39.26:140][719]LogUObjectHash: Compacting FUObjectHashTables data took   2.41ms
+[2022.07.01-22.39.26:141][719]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2022.07.01-22.39.26:141][719]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.07.01-22.39.26:141][719]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.07.01-22.39.26:141][719]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.07.01-22.39.26:141][719]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.07.01-22.39.26:141][719]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.07.01-22.39.26:141][719]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.07.01-22.39.26:141][719]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.07.01-22.39.26:141][719]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.07.01-22.39.26:142][719]LogAudio: Display: Using built-in audio occlusion.
+[2022.07.01-22.39.26:142][719]LogAudioMixer: Display: Initializing audio mixer.
+[2022.07.01-22.39.26:155][719]LogAudioMixer: Display: 0: FrontLeft
+[2022.07.01-22.39.26:155][719]LogAudioMixer: Display: 1: FrontRight
+[2022.07.01-22.39.26:162][719]LogAudioMixer: Display: Using Audio Device Acer GR235H (NVIDIA High Definition Audio)
+[2022.07.01-22.39.26:162][719]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.07.01-22.39.26:162][719]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.07.01-22.39.26:162][719]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.07.01-22.39.26:163][719]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.07.01-22.39.26:163][719]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.07.01-22.39.26:163][719]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.07.01-22.39.26:173][719]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.07.01-22.39.26:173][719]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.07.01-22.39.26:173][719]LogInit: FAudioDevice initialized.
+[2022.07.01-22.39.26:173][719]LogAudio: Display: Audio Device (ID: 8) registered with world 'MainMenu'.
+[2022.07.01-22.39.26:177][719]LogLoad: Game class is 'BP_MainMenuGameMode_C'
+[2022.07.01-22.39.26:178][719]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2022.07.01-23.39.26
+[2022.07.01-22.39.26:178][719]LogWorld: Bringing up level for play took: 0.000329
+[2022.07.01-22.39.26:178][719]LogOnline: OSS: Creating online subsystem instance for: :Context_9
+[2022.07.01-22.39.26:180][719]PIE: Server logged in
+[2022.07.01-22.39.26:181][719]PIE: Play in editor total start time 0.149 seconds.
+[2022.07.01-22.39.26:868][801]LogNet: Browse: /Game/Levels/OpenSpace
+[2022.07.01-22.39.26:868][801]LogLoad: LoadMap: /Game/Levels/OpenSpace
+[2022.07.01-22.39.26:868][801]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.39.26:868][801]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.39.26:868][801]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.39.26:910][801]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.39.26:939][801]LogUObjectHash: Compacting FUObjectHashTables data took   2.01ms
+[2022.07.01-22.39.27:003][801]LogAudio: Display: Audio Device (ID: 8) registered with world 'OpenSpace'.
+[2022.07.01-22.39.27:004][801]LogAIModule: Creating AISystem for world OpenSpace
+[2022.07.01-22.39.27:004][801]LogLoad: Game class is 'BP_SpaceShooterGameMode_C'
+[2022.07.01-22.39.27:007][801]LogWorld: Bringing World /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace up for play (max tick rate 0) at 2022.07.01-23.39.27
+[2022.07.01-22.39.27:007][801]LogWorld: Bringing up level for play took: 0.002285
+[2022.07.01-22.39.27:007][801]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2022.07.01-22.39.27:056][801]LogLoad: Took 0.187738 seconds to LoadMap(/Game/Levels/OpenSpace)
+[2022.07.01-22.39.35:753][839]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.39.35:753][839]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_OpenSpace
+[2022.07.01-22.39.35:753][839]LogWorld: UWorld::CleanupWorld for OpenSpace, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.39.35:754][839]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.39.35:759][839]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.07.01-22.39.35:761][839]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.39.35:770][839]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.39.35:770][839]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.39.35:771][839]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.39.35:782][839]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.39.35:784][839]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2022.07.01-22.39.35:824][841]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2022.07.01-22.39.42:244][551]LogActor: Warning: BP_Wall_C /Engine/Transient.World_2:PersistentLevel.BP_Wall_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.39.44:456][798]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/BP_PlayerBullet.BP_PlayerBullet
+[2022.07.01-22.39.52:700][717]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2022.07.01-22.39.54:582][891]BlueprintLog: New page: Compile BP_PlayerBullet
+[2022.07.01-22.39.54:618][891]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2022.07.01-22.39.55:373][957]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/BP_PlayerBullet" FILE="D:/Unreal Projects/SpaceShooter_/SpaceShooter/Content/Blueprints/BP_PlayerBullet.uasset" SILENT=true
+[2022.07.01-22.39.55:377][957]LogSavePackage: Moving 'D:/Unreal Projects/SpaceShooter_/SpaceShooter/Saved/BP_PlayerBullet48985394409D0880196E0E8717150403.tmp' to 'D:/Unreal Projects/SpaceShooter_/SpaceShooter/Content/Blueprints/BP_PlayerBullet.uasset'
+[2022.07.01-22.39.55:390][957]AssetCheck: New page: Asset Save: BP_PlayerBullet
+[2022.07.01-22.39.55:390][957]LogContentValidation: Display: Validating Blueprint /Game/Blueprints/BP_PlayerBullet.BP_PlayerBullet
+[2022.07.01-22.39.55:837][ 11]LogSlate: Window 'BP_PlayerBullet' being destroyed
+[2022.07.01-22.39.55:840][ 11]LogSlate: Window 'BP_PlayerBullet' being destroyed
+[2022.07.01-22.39.55:877][ 11]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.39.55:877][ 11]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.39.57:138][145]LogTemp: Repeating last play command: Selected Viewport
+[2022.07.01-22.39.57:142][145]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.07.01-22.39.57:142][145]PIE: New page: PIE session: MainMenu (2 Jul 2022, 00:39:57)
+[2022.07.01-22.39.57:177][145]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.39.57:178][145]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001037s)
+[2022.07.01-22.39.57:179][145]LogAIModule: Creating AISystem for world MainMenu
+[2022.07.01-22.39.57:179][145]LogPlayLevel: PIE: World Init took: (0.000796s)
+[2022.07.01-22.39.57:179][145]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.001996s)
+[2022.07.01-22.39.57:191][145]LogUObjectHash: Compacting FUObjectHashTables data took   1.58ms
+[2022.07.01-22.39.57:191][145]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2022.07.01-22.39.57:191][145]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.07.01-22.39.57:191][145]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.07.01-22.39.57:191][145]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.07.01-22.39.57:191][145]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.07.01-22.39.57:191][145]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.07.01-22.39.57:191][145]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.07.01-22.39.57:191][145]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.07.01-22.39.57:192][145]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.07.01-22.39.57:192][145]LogAudio: Display: Using built-in audio occlusion.
+[2022.07.01-22.39.57:192][145]LogAudioMixer: Display: Initializing audio mixer.
+[2022.07.01-22.39.57:194][145]LogAudioMixer: Display: 0: FrontLeft
+[2022.07.01-22.39.57:194][145]LogAudioMixer: Display: 1: FrontRight
+[2022.07.01-22.39.57:201][145]LogAudioMixer: Display: Using Audio Device Acer GR235H (NVIDIA High Definition Audio)
+[2022.07.01-22.39.57:201][145]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.07.01-22.39.57:201][145]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.07.01-22.39.57:201][145]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.07.01-22.39.57:201][145]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.07.01-22.39.57:201][145]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.07.01-22.39.57:201][145]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.07.01-22.39.57:212][145]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.07.01-22.39.57:212][145]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.07.01-22.39.57:212][145]LogInit: FAudioDevice initialized.
+[2022.07.01-22.39.57:212][145]LogAudio: Display: Audio Device (ID: 9) registered with world 'MainMenu'.
+[2022.07.01-22.39.57:220][145]LogLoad: Game class is 'BP_MainMenuGameMode_C'
+[2022.07.01-22.39.57:220][145]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2022.07.01-23.39.57
+[2022.07.01-22.39.57:220][145]LogWorld: Bringing up level for play took: 0.000263
+[2022.07.01-22.39.57:220][145]LogOnline: OSS: Creating online subsystem instance for: :Context_12
+[2022.07.01-22.39.57:222][145]PIE: Server logged in
+[2022.07.01-22.39.57:223][145]PIE: Play in editor total start time 0.081 seconds.
+[2022.07.01-22.39.58:141][255]LogNet: Browse: /Game/Levels/OpenSpace
+[2022.07.01-22.39.58:141][255]LogLoad: LoadMap: /Game/Levels/OpenSpace
+[2022.07.01-22.39.58:141][255]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.39.58:141][255]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.39.58:141][255]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.39.58:177][255]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.39.58:179][255]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2022.07.01-22.39.58:185][255]LogAudio: Display: Audio Device (ID: 9) registered with world 'OpenSpace'.
+[2022.07.01-22.39.58:185][255]LogAIModule: Creating AISystem for world OpenSpace
+[2022.07.01-22.39.58:186][255]LogLoad: Game class is 'BP_SpaceShooterGameMode_C'
+[2022.07.01-22.39.58:189][255]LogWorld: Bringing World /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace up for play (max tick rate 0) at 2022.07.01-23.39.58
+[2022.07.01-22.39.58:189][255]LogWorld: Bringing up level for play took: 0.002469
+[2022.07.01-22.39.58:189][255]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2022.07.01-22.39.58:190][255]LogLoad: Took 0.049844 seconds to LoadMap(/Game/Levels/OpenSpace)
+[2022.07.01-22.40.00:139][488]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.08:872][536]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.12:831][ 11]LogNet: Browse: /Game/Levels/MainMenu
+[2022.07.01-22.40.12:831][ 11]LogLoad: LoadMap: /Game/Levels/MainMenu
+[2022.07.01-22.40.12:831][ 11]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_OpenSpace
+[2022.07.01-22.40.12:831][ 11]LogWorld: UWorld::CleanupWorld for OpenSpace, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.40.12:831][ 11]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.40.12:877][ 11]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.40.12:879][ 11]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2022.07.01-22.40.12:880][ 11]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.40.12:881][ 11]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000713s)
+[2022.07.01-22.40.12:882][ 11]LogAIModule: Creating AISystem for world MainMenu
+[2022.07.01-22.40.12:882][ 11]LogPlayLevel: PIE: World Init took: (0.000575s)
+[2022.07.01-22.40.12:882][ 11]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.001367s)
+[2022.07.01-22.40.12:882][ 11]LogAudio: Display: Audio Device (ID: 9) registered with world 'MainMenu'.
+[2022.07.01-22.40.12:882][ 11]LogLoad: Game class is 'BP_MainMenuGameMode_C'
+[2022.07.01-22.40.12:882][ 11]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2022.07.01-23.40.12
+[2022.07.01-22.40.12:882][ 11]LogWorld: Bringing up level for play took: 0.000240
+[2022.07.01-22.40.12:883][ 11]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2022.07.01-22.40.12:883][ 11]LogLoad: Took 0.053066 seconds to LoadMap(/Game/Levels/UEDPIE_0_MainMenu)
+[2022.07.01-22.40.14:890][251]LogNet: Browse: /Game/Levels/OpenSpace
+[2022.07.01-22.40.14:890][251]LogLoad: LoadMap: /Game/Levels/OpenSpace
+[2022.07.01-22.40.14:890][251]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.40.14:890][251]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.40.14:890][251]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.40.14:928][251]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.40.14:930][251]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2022.07.01-22.40.14:936][251]LogAudio: Display: Audio Device (ID: 9) registered with world 'OpenSpace'.
+[2022.07.01-22.40.14:936][251]LogAIModule: Creating AISystem for world OpenSpace
+[2022.07.01-22.40.14:937][251]LogLoad: Game class is 'BP_SpaceShooterGameMode_C'
+[2022.07.01-22.40.14:939][251]LogWorld: Bringing World /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace up for play (max tick rate 0) at 2022.07.01-23.40.14
+[2022.07.01-22.40.14:940][251]LogWorld: Bringing up level for play took: 0.002410
+[2022.07.01-22.40.14:940][251]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2022.07.01-22.40.14:941][251]LogLoad: Took 0.050779 seconds to LoadMap(/Game/Levels/OpenSpace)
+[2022.07.01-22.40.18:964][733]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.25:381][502]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.26:781][670]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.27:464][752]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_3 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.31:506][237]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_4 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.31:831][276]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_5 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.35:047][662]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_6 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.40:223][283]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_7 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.40:856][359]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_8 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.42:415][546]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_9 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.40.48:179][234]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.40.48:179][234]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_OpenSpace
+[2022.07.01-22.40.48:179][234]LogWorld: UWorld::CleanupWorld for OpenSpace, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.40.48:180][234]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.40.48:184][234]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.07.01-22.40.48:186][234]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.40.48:196][234]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.40.48:196][234]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.40.48:197][234]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.40.48:209][234]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.40.48:211][234]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2022.07.01-22.40.48:248][236]LogPlayLevel: Display: Destroying online subsystem :Context_12
+[2022.07.01-22.40.50:509][503]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/MainMenu" FILE="D:/Unreal Projects/SpaceShooter_/SpaceShooter/Content/Levels/MainMenu.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.07.01-22.40.50:521][503]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2022.07.01-22.40.50:524][503]LogSavePackage: Moving 'D:/Unreal Projects/SpaceShooter_/SpaceShooter/Saved/MainMenu170867D14DCB8E6AD0DB4D8108724A66.tmp' to 'D:/Unreal Projects/SpaceShooter_/SpaceShooter/Content/Levels/MainMenu.umap'
+[2022.07.01-22.40.50:538][503]AssetCheck: New page: Asset Save: MainMenu
+[2022.07.01-22.40.50:538][503]LogContentValidation: Display: Validating World /Game/Levels/MainMenu.MainMenu
+[2022.07.01-22.40.51:941][619]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/BP_PlayerBullet.BP_PlayerBullet
+[2022.07.01-22.41.45:455][871]LogHotReload: New module detected: UE4Editor-SpaceShooter-0027.dll
+[2022.07.01-22.41.46:138][874]LogHotReload: Starting Hot-Reload from IDE
+[2022.07.01-22.41.46:188][874]LogClass: EMainMenuWidget HotReload.
+[2022.07.01-22.41.46:188][874]LogClass: EPlayerPowerup HotReload.
+[2022.07.01-22.41.46:197][874]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SpaceShooter' in 0.0002 seconds. Added 16 classes and 2 folders.
+[2022.07.01-22.41.46:199][874]Display: HotReload successful (9 functions remapped  0 scriptstructs remapped)
+[2022.07.01-22.41.46:251][874]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0068 seconds. Added 3617 classes and 861 folders.
+[2022.07.01-22.41.46:254][874]Display: HotReload took  0.1s.
+[2022.07.01-22.44.26:993][354]LogHotReload: New module detected: UE4Editor-SpaceShooter-0028.dll
+[2022.07.01-22.44.27:676][357]LogHotReload: Starting Hot-Reload from IDE
+[2022.07.01-22.44.27:727][357]LogClass: EMainMenuWidget HotReload.
+[2022.07.01-22.44.27:727][357]LogClass: EPlayerPowerup HotReload.
+[2022.07.01-22.44.27:740][357]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SpaceShooter' in 0.0003 seconds. Added 16 classes and 2 folders.
+[2022.07.01-22.44.27:743][357]Display: HotReload successful (9 functions remapped  0 scriptstructs remapped)
+[2022.07.01-22.44.27:806][357]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0070 seconds. Added 3617 classes and 861 folders.
+[2022.07.01-22.44.27:810][357]Display: HotReload took  0.1s.
+[2022.07.01-22.44.33:500][629]LogTemp: Repeating last play command: Selected Viewport
+[2022.07.01-22.44.33:504][629]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.07.01-22.44.33:504][629]PIE: New page: PIE session: MainMenu (2 Jul 2022, 00:44:33)
+[2022.07.01-22.44.33:534][629]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.44.33:535][629]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000786s)
+[2022.07.01-22.44.33:547][629]LogAIModule: Creating AISystem for world MainMenu
+[2022.07.01-22.44.33:547][629]LogPlayLevel: PIE: World Init took: (0.012157s)
+[2022.07.01-22.44.33:547][629]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.013056s)
+[2022.07.01-22.44.33:603][629]LogUObjectHash: Compacting FUObjectHashTables data took   2.52ms
+[2022.07.01-22.44.33:604][629]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2022.07.01-22.44.33:604][629]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.07.01-22.44.33:604][629]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.07.01-22.44.33:604][629]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.07.01-22.44.33:604][629]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.07.01-22.44.33:604][629]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.07.01-22.44.33:604][629]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.07.01-22.44.33:604][629]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.07.01-22.44.33:604][629]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.07.01-22.44.33:604][629]LogAudio: Display: Using built-in audio occlusion.
+[2022.07.01-22.44.33:604][629]LogAudioMixer: Display: Initializing audio mixer.
+[2022.07.01-22.44.33:607][629]LogAudioMixer: Display: 0: FrontLeft
+[2022.07.01-22.44.33:607][629]LogAudioMixer: Display: 1: FrontRight
+[2022.07.01-22.44.33:613][629]LogAudioMixer: Display: Using Audio Device Acer GR235H (NVIDIA High Definition Audio)
+[2022.07.01-22.44.33:613][629]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.07.01-22.44.33:613][629]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.07.01-22.44.33:613][629]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.07.01-22.44.33:614][629]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.07.01-22.44.33:614][629]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.07.01-22.44.33:614][629]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.07.01-22.44.33:624][629]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.07.01-22.44.33:624][629]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.07.01-22.44.33:624][629]LogInit: FAudioDevice initialized.
+[2022.07.01-22.44.33:625][629]LogAudio: Display: Audio Device (ID: 10) registered with world 'MainMenu'.
+[2022.07.01-22.44.33:635][629]LogLoad: Game class is 'BP_MainMenuGameMode_C'
+[2022.07.01-22.44.33:636][629]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2022.07.01-23.44.33
+[2022.07.01-22.44.33:636][629]LogWorld: Bringing up level for play took: 0.000287
+[2022.07.01-22.44.33:636][629]LogOnline: OSS: Creating online subsystem instance for: :Context_14
+[2022.07.01-22.44.33:637][629]PIE: Server logged in
+[2022.07.01-22.44.33:638][629]PIE: Play in editor total start time 0.135 seconds.
+[2022.07.01-22.44.35:341][832]LogNet: Browse: /Game/Levels/OpenSpace
+[2022.07.01-22.44.35:341][832]LogLoad: LoadMap: /Game/Levels/OpenSpace
+[2022.07.01-22.44.35:341][832]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.44.35:341][832]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.44.35:341][832]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.44.35:400][832]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.44.35:406][832]LogUObjectHash: Compacting FUObjectHashTables data took   1.65ms
+[2022.07.01-22.44.35:487][832]LogAudio: Display: Audio Device (ID: 10) registered with world 'OpenSpace'.
+[2022.07.01-22.44.35:488][832]LogAIModule: Creating AISystem for world OpenSpace
+[2022.07.01-22.44.35:488][832]LogLoad: Game class is 'BP_SpaceShooterGameMode_C'
+[2022.07.01-22.44.35:491][832]LogWorld: Bringing World /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace up for play (max tick rate 0) at 2022.07.01-23.44.35
+[2022.07.01-22.44.35:492][832]LogWorld: Bringing up level for play took: 0.002791
+[2022.07.01-22.44.35:492][832]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2022.07.01-22.44.35:546][832]LogLoad: Took 0.204039 seconds to LoadMap(/Game/Levels/OpenSpace)
+[2022.07.01-22.45.00:635][830]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.45.00:635][830]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_OpenSpace
+[2022.07.01-22.45.00:635][830]LogWorld: UWorld::CleanupWorld for OpenSpace, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.45.00:636][830]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.45.00:644][830]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.07.01-22.45.00:647][830]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.45.00:674][830]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.45.00:674][830]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.45.00:675][830]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.45.00:686][830]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.45.00:688][830]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2022.07.01-22.45.00:702][831]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2022.07.01-22.45.22:552][  3]LogHotReload: New module detected: UE4Editor-SpaceShooter-0029.dll
+[2022.07.01-22.45.23:231][  6]LogHotReload: Starting Hot-Reload from IDE
+[2022.07.01-22.45.23:282][  6]LogClass: EMainMenuWidget HotReload.
+[2022.07.01-22.45.23:282][  6]LogClass: EPlayerPowerup HotReload.
+[2022.07.01-22.45.23:292][  6]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SpaceShooter' in 0.0002 seconds. Added 16 classes and 2 folders.
+[2022.07.01-22.45.23:295][  6]Display: HotReload successful (9 functions remapped  0 scriptstructs remapped)
+[2022.07.01-22.45.23:372][  6]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0065 seconds. Added 3617 classes and 861 folders.
+[2022.07.01-22.45.23:374][  6]Display: HotReload took  0.1s.
+[2022.07.01-22.45.27:842][250]LogTemp: Repeating last play command: Selected Viewport
+[2022.07.01-22.45.27:846][250]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.07.01-22.45.27:847][250]PIE: New page: PIE session: MainMenu (2 Jul 2022, 00:45:27)
+[2022.07.01-22.45.27:877][250]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.45.27:878][250]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000830s)
+[2022.07.01-22.45.27:878][250]LogAIModule: Creating AISystem for world MainMenu
+[2022.07.01-22.45.27:879][250]LogPlayLevel: PIE: World Init took: (0.000706s)
+[2022.07.01-22.45.27:879][250]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.001659s)
+[2022.07.01-22.45.27:919][250]LogUObjectHash: Compacting FUObjectHashTables data took   2.63ms
+[2022.07.01-22.45.27:920][250]LogAudio: Display: Creating Audio Device:                 Id: 11, Scope: Unique, Realtime: True
+[2022.07.01-22.45.27:920][250]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.07.01-22.45.27:920][250]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.07.01-22.45.27:920][250]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.07.01-22.45.27:920][250]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.07.01-22.45.27:920][250]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.07.01-22.45.27:920][250]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.07.01-22.45.27:920][250]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.07.01-22.45.27:920][250]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.07.01-22.45.27:920][250]LogAudio: Display: Using built-in audio occlusion.
+[2022.07.01-22.45.27:920][250]LogAudioMixer: Display: Initializing audio mixer.
+[2022.07.01-22.45.27:922][250]LogAudioMixer: Display: 0: FrontLeft
+[2022.07.01-22.45.27:922][250]LogAudioMixer: Display: 1: FrontRight
+[2022.07.01-22.45.27:929][250]LogAudioMixer: Display: Using Audio Device Acer GR235H (NVIDIA High Definition Audio)
+[2022.07.01-22.45.27:929][250]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.07.01-22.45.27:929][250]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.07.01-22.45.27:929][250]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.07.01-22.45.27:929][250]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.07.01-22.45.27:929][250]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.07.01-22.45.27:929][250]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.07.01-22.45.27:940][250]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.07.01-22.45.27:940][250]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.07.01-22.45.27:940][250]LogInit: FAudioDevice initialized.
+[2022.07.01-22.45.27:940][250]LogAudio: Display: Audio Device (ID: 11) registered with world 'MainMenu'.
+[2022.07.01-22.45.27:946][250]LogLoad: Game class is 'BP_MainMenuGameMode_C'
+[2022.07.01-22.45.27:947][250]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2022.07.01-23.45.27
+[2022.07.01-22.45.27:947][250]LogWorld: Bringing up level for play took: 0.000235
+[2022.07.01-22.45.27:947][250]LogOnline: OSS: Creating online subsystem instance for: :Context_15
+[2022.07.01-22.45.27:949][250]PIE: Server logged in
+[2022.07.01-22.45.27:950][250]PIE: Play in editor total start time 0.104 seconds.
+[2022.07.01-22.45.28:826][354]LogNet: Browse: /Game/Levels/OpenSpace
+[2022.07.01-22.45.28:826][354]LogLoad: LoadMap: /Game/Levels/OpenSpace
+[2022.07.01-22.45.28:826][354]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2022.07.01-22.45.28:826][354]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.45.28:826][354]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.45.28:869][354]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.45.28:886][354]LogUObjectHash: Compacting FUObjectHashTables data took   1.68ms
+[2022.07.01-22.45.28:892][354]LogAudio: Display: Audio Device (ID: 11) registered with world 'OpenSpace'.
+[2022.07.01-22.45.28:893][354]LogAIModule: Creating AISystem for world OpenSpace
+[2022.07.01-22.45.28:893][354]LogLoad: Game class is 'BP_SpaceShooterGameMode_C'
+[2022.07.01-22.45.28:896][354]LogWorld: Bringing World /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace up for play (max tick rate 0) at 2022.07.01-23.45.28
+[2022.07.01-22.45.28:896][354]LogWorld: Bringing up level for play took: 0.002238
+[2022.07.01-22.45.28:896][354]LogGameMode: FindPlayerStart: PATHS NOT DEFINED or NO PLAYERSTART with positive rating
+[2022.07.01-22.45.28:897][354]LogLoad: Took 0.071407 seconds to LoadMap(/Game/Levels/OpenSpace)
+[2022.07.01-22.45.41:175][825]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.45.56:001][604]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.45.58:659][923]LogActor: Warning: BP_SpeedBoost_C /Game/Levels/UEDPIE_0_OpenSpace.OpenSpace:PersistentLevel.BP_SpeedBoost_C_2 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.07.01-22.46.08:238][ 69]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.46.08:238][ 69]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_OpenSpace
+[2022.07.01-22.46.08:238][ 69]LogWorld: UWorld::CleanupWorld for OpenSpace, bSessionEnded=true, bCleanupResources=true
+[2022.07.01-22.46.08:239][ 69]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.46.08:248][ 69]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.07.01-22.46.08:251][ 69]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.07.01-22.46.08:265][ 69]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.07.01-22.46.08:266][ 69]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.46.08:266][ 69]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.07.01-22.46.08:279][ 69]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.07.01-22.46.08:281][ 69]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2022.07.01-22.46.08:317][ 71]LogPlayLevel: Display: Destroying online subsystem :Context_15
+[2022.07.01-22.46.08:698][115]Cmd: SELECT NONE
+[2022.07.01-22.46.10:712][351]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/MainMenu" FILE="D:/Unreal Projects/SpaceShooter_/SpaceShooter/Content/Levels/MainMenu.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.07.01-22.46.10:727][351]LogUObjectHash: Compacting FUObjectHashTables data took   1.35ms
+[2022.07.01-22.46.10:730][351]LogSavePackage: Moving 'D:/Unreal Projects/SpaceShooter_/SpaceShooter/Saved/MainMenu2628A4B84794048843EF6996F48A5068.tmp' to 'D:/Unreal Projects/SpaceShooter_/SpaceShooter/Content/Levels/MainMenu.umap'
+[2022.07.01-22.46.10:748][351]AssetCheck: New page: Asset Save: MainMenu
+[2022.07.01-22.46.10:748][351]LogContentValidation: Display: Validating World /Game/Levels/MainMenu.MainMenu

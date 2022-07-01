@@ -5,6 +5,7 @@
 #include "EnemyCharacter.h"
 #include "PlayerCharacter.h"
 #include "Wall.h"
+#include "Powerup.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/BoxComponent.h"
 
@@ -37,6 +38,30 @@ void APlayerBullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent
 			playerCharacter->IncreaseScore(10);
 		}
 
+		if (FMath::FRandRange(1, 3) < 2)
+		{
+			UWorld* world = GetWorld();
+
+			if (world)
+			{
+				//set the spawn parameters
+				FActorSpawnParameters SpawnParams;
+				SpawnParams.Owner = this;
+				SpawnParams.Instigator = GetInstigator();
+				FVector BulletSpawnerVec;
+
+				//set the location to spawn the bullet
+				BulletSpawnerVec = FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z + 5.f);
+
+				GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("world is not a nullptr")));
+				//check that the bullet asset is not a nullptr and spawn the bullet
+				if (powerup != nullptr)
+				{
+					world->SpawnActor<APowerup>(powerup, BulletSpawnerVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+					GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("powerup is not a nullptr")));
+				}
+			}
+		}
 		Destroy();
 	}
 
