@@ -15,7 +15,7 @@ ASpawnVolume::ASpawnVolume()
 
 	//set the spawn delay range
 	spawnDelayRangeLow = 5.0f;
-	spawnDelayRangeMax = 15.0f;
+	spawnDelayRangeMax = 10.0f;
 }
 
 // Called when the game starts or when spawned

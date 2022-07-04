@@ -91,14 +91,14 @@ protected:
 
 
 	//controls the speed at which the player can rotate
-	UPROPERTY(EditAnywhere, meta = (UIMin = 0.5, UIMax = 2), Category = movement)
+	UPROPERTY(EditAnywhere, meta = (UIMin = 0.1, UIMax = 2), Category = movement)
 		float rotationSpeed;
 
 	//the original rotation rate of the player
 	float originalRotationSpeed;
 
 	//controls the speed at which the player can move
-	UPROPERTY(EditAnywhere, meta = (UIMin = 0.5, UIMax = 2), Category = movement)
+	UPROPERTY(EditAnywhere, meta = (UIMin = 0.1, UIMax = 2), Category = movement)
 		float movementSpeed;
 
 	//the original movement speed of the player

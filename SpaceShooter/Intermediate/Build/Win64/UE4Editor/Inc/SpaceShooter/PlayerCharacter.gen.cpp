@@ -207,7 +207,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 		{ "ToolTip", "controls the speed at which the player can rotate" },
 		{ "UIMax", "2" },
-		{ "UIMin", "0.500000" },
+		{ "UIMin", "0.100000" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_rotationSpeed = { "rotationSpeed", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerCharacter, rotationSpeed), METADATA_PARAMS(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_rotationSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_rotationSpeed_MetaData)) };
@@ -218,7 +218,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 		{ "ToolTip", "controls the speed at which the player can move" },
 		{ "UIMax", "2" },
-		{ "UIMin", "0.500000" },
+		{ "UIMin", "0.100000" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_movementSpeed = { "movementSpeed", nullptr, (EPropertyFlags)0x0020080000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APlayerCharacter, movementSpeed), METADATA_PARAMS(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_movementSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::NewProp_movementSpeed_MetaData)) };
@@ -278,7 +278,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APlayerCharacter, 2026772814);
+	IMPLEMENT_CLASS(APlayerCharacter, 3691922592);
 	template<> SPACESHOOTER_API UClass* StaticClass<APlayerCharacter>()
 	{
 		return APlayerCharacter::StaticClass();
