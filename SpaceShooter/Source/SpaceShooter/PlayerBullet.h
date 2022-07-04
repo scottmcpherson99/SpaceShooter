@@ -28,6 +28,11 @@ protected:
 		void OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 	//player bullet asset
-	UPROPERTY(EditAnywhere, Category = "Assets")
-		TSubclassOf<class APowerup> powerup;
+	UPROPERTY(EditAnywhere, Category = "Powerups")
+		TSubclassOf<class ASpeedBoost> speedBoost;
+
+
+	//player extra life asset
+	UPROPERTY(EditAnywhere, Category = "Powerups")
+		TSubclassOf<class AHealthDrop> healthDrop;
 };

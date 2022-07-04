@@ -40,7 +40,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 		return EPlayerPowerup_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EPlayerPowerup(EPlayerPowerup_StaticEnum, TEXT("/Script/SpaceShooter"), TEXT("EPlayerPowerup"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_SpaceShooter_EPlayerPowerup_Hash() { return 2506867238U; }
+	uint32 Get_Z_Construct_UEnum_SpaceShooter_EPlayerPowerup_Hash() { return 1876869435U; }
 	UEnum* Z_Construct_UEnum_SpaceShooter_EPlayerPowerup()
 	{
 #if WITH_HOT_RELOAD
@@ -54,10 +54,13 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "EPlayerPowerup::ENOPOWERUP", (int64)EPlayerPowerup::ENOPOWERUP },
 				{ "EPlayerPowerup::ESPEEDBOOST", (int64)EPlayerPowerup::ESPEEDBOOST },
+				{ "EPlayerPowerup::EHEALTHBOOST", (int64)EPlayerPowerup::EHEALTHBOOST },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "BlueprintType", "true" },
+				{ "EHEALTHBOOST.DisplayName", "HealthBoost" },
+				{ "EHEALTHBOOST.Name", "EPlayerPowerup::EHEALTHBOOST" },
 				{ "ENOPOWERUP.DisplayName", "NoPowerup" },
 				{ "ENOPOWERUP.Name", "EPlayerPowerup::ENOPOWERUP" },
 				{ "ESPEEDBOOST.DisplayName", "SpeedBoost" },

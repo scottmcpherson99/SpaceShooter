@@ -3,10 +3,10 @@
   Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 4 actions with 16 processes...
     [1/4] PlayerBullet.cpp
-    [2/4] UE4Editor-SpaceShooter-0029.lib
-       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0029.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0029.exp
-    [3/4] UE4Editor-SpaceShooter-0029.dll
-       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0029.suppressed.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0029.suppressed.exp
+    [2/4] UE4Editor-SpaceShooter-0065.lib
+       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0065.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0065.exp
+    [3/4] UE4Editor-SpaceShooter-0065.dll
+       Creating library D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0065.suppressed.lib and object D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Development\SpaceShooter\UE4Editor-SpaceShooter-0065.suppressed.exp
     [4/4] SpaceShooterEditor.target
-  Total time in Parallel executor: 1.32 seconds
-  Total execution time: 1.78 seconds
+  Total time in Parallel executor: 1.29 seconds
+  Total execution time: 1.77 seconds

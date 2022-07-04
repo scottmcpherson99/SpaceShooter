@@ -11,7 +11,8 @@ UENUM(BlueprintType)
 enum class EPlayerPowerup : uint8
 {
 	ENOPOWERUP UMETA(DisplayName = "NoPowerup"),
-	ESPEEDBOOST UMETA(DisplayName = "SpeedBoost")
+	ESPEEDBOOST UMETA(DisplayName = "SpeedBoost"),
+	EHEALTHBOOST UMETA(DisplayName = "HealthBoost")
 };
 
 /**

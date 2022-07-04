@@ -87,9 +87,23 @@ void APlayerCharacter::choosePowerup(EPlayerPowerup powerup_)
 		rotationSpeed = originalRotationSpeed;
 		break;
 
+		//increase the players speed
 	case EPlayerPowerup::ESPEEDBOOST:
 		movementSpeed = 1.5 * originalMovementSpeed;
 		rotationSpeed = 1.5 * originalRotationSpeed;
+
+		break;
+
+		//increase the health by 1
+	case EPlayerPowerup::EHEALTHBOOST:
+		health++;
+		
+		ASpaceShooterGameMode* gameMode = (ASpaceShooterGameMode*)GetWorld()->GetAuthGameMode();
+		if (gameMode)
+		{
+			gameMode->UpdatePlayerStats(health, score, highScore);
+		}
+		break;
 	}
 }
 /// //////////////////////////////////////////////////////////////////////

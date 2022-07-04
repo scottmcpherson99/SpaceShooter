@@ -21,8 +21,12 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\In
 D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\PlayerCharacter.generated.h
 D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\Wall.h
 D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\Wall.generated.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\SpeedBoost.h
 D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\Powerup.h
 D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\Powerup.generated.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\SpeedBoost.generated.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\HealthDrop.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\HealthDrop.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h

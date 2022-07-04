@@ -5,7 +5,8 @@
 #include "EnemyCharacter.h"
 #include "PlayerCharacter.h"
 #include "Wall.h"
-#include "Powerup.h"
+#include "SpeedBoost.h"
+#include "HealthDrop.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/BoxComponent.h"
 
@@ -38,7 +39,7 @@ void APlayerBullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent
 			playerCharacter->IncreaseScore(10);
 		}
 
-		if (FMath::FRandRange(1, 3) < 2)
+		if (FMath::FRandRange(1, 15) < 2)
 		{
 			UWorld* world = GetWorld();
 
@@ -48,18 +49,32 @@ void APlayerBullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent
 				FActorSpawnParameters SpawnParams;
 				SpawnParams.Owner = this;
 				SpawnParams.Instigator = GetInstigator();
-				FVector BulletSpawnerVec;
+				FVector powerUpSpawnerVec;
 
 				//set the location to spawn the bullet
-				BulletSpawnerVec = FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z + 5.f);
+				powerUpSpawnerVec = FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z + 5.f);
 
-				GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("world is not a nullptr")));
-				//check that the bullet asset is not a nullptr and spawn the bullet
-				if (powerup != nullptr)
+				float powerUpToSpawn = FMath::FRandRange(0, 3);
+
+
+				if (powerUpToSpawn < 2)
 				{
-					world->SpawnActor<APowerup>(powerup, BulletSpawnerVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
-					GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Green, FString::Printf(TEXT("powerup is not a nullptr")));
+					//check that the bullet asset is not a nullptr and spawn the bullet
+					if (speedBoost != nullptr)
+					{
+						world->SpawnActor<ASpeedBoost>(speedBoost, powerUpSpawnerVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+					}
 				}
+
+				else if (powerUpToSpawn >= 2 && powerUpToSpawn < 3)
+				{
+					//check that the bullet asset is not a nullptr and spawn the bullet
+					if (healthDrop != nullptr)
+					{
+						world->SpawnActor<AHealthDrop>(healthDrop, powerUpSpawnerVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+					}
+				}
+
 			}
 		}
 		Destroy();

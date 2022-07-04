@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\SpaceShooter.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{EC7A7110-5BD6-4EF4-A29C-9685BAAE2A7C}</UniqueIdentifier>
+      <UniqueIdentifier>{24F25B1A-A640-4A6C-AA3A-EE6A211CACE0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\SpaceShooter.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{B2A831EB-B3E0-4D76-94C9-8FA380707D32}</UniqueIdentifier>
+      <UniqueIdentifier>{983F5677-5F5B-41F2-B73C-BD11FCA96163}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\SpaceShooter">
-      <UniqueIdentifier>{0A830FDB-B2EA-4E9A-9D4D-45F92E276AE6}</UniqueIdentifier>
+      <UniqueIdentifier>{EB11C74F-D056-4755-A02A-74D6B1EF45AD}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\SpaceShooter\blackboard_keys.h">
       <Filter>Source\SpaceShooter</Filter>
@@ -60,6 +60,12 @@
       <Filter>Source\SpaceShooter</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\SpaceShooter\GameScreenWidget.h">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpaceShooter\HealthDrop.cpp">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceShooter\HealthDrop.h">
       <Filter>Source\SpaceShooter</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\SpaceShooter\MainMenuGameMode.cpp">
@@ -129,6 +135,12 @@
       <Filter>Source\SpaceShooter</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\SpaceShooter\SpawnVolume.h">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpaceShooter\SpeedBoost.cpp">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceShooter\SpeedBoost.h">
       <Filter>Source\SpaceShooter</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\SpaceShooter\Wall.cpp">
