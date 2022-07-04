@@ -2,6 +2,7 @@
 
 
 #include "EnemyCharacter.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "PaperSpriteComponent.h"
 #include "PlayerCharacter.h"
 #include "Kismet/KismetSystemLibrary.h"
@@ -28,6 +29,8 @@ void AEnemyCharacter::BeginPlay()
 	Super::BeginPlay();
 	//turn on collision checks
 	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &AEnemyCharacter::OnTriggerBoxOverlap);
+
+	GetCharacterMovement()->MaxWalkSpeed = FMath::FRandRange(150.f, 400.f);
 }
 
 void AEnemyCharacter::Tick(float DeltaTime)
