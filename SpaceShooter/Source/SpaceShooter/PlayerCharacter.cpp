@@ -59,6 +59,8 @@ void APlayerCharacter::BeginPlay()
 	//set the original speeds
 	originalMovementSpeed = movementSpeed;
 	originalRotationSpeed = rotationSpeed;
+	doublePoints = 1;
+
 }
 
 /// //////////////////////////////////////////////////////////////////////
@@ -80,17 +82,22 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 /// Powerup
 void APlayerCharacter::choosePowerup(EPlayerPowerup powerup_)
 {
+
+	ASpaceShooterGameMode* gameMode = (ASpaceShooterGameMode*)GetWorld()->GetAuthGameMode();
+
 	switch (powerup_)
 	{
 	case EPlayerPowerup::ENOPOWERUP:
 		movementSpeed = originalMovementSpeed;
 		rotationSpeed = originalRotationSpeed;
+		doublePoints = 1;
 		break;
 
 		//increase the players speed
 	case EPlayerPowerup::ESPEEDBOOST:
 		movementSpeed = 1.5 * originalMovementSpeed;
 		rotationSpeed = 1.5 * originalRotationSpeed;
+		doublePoints = 1;
 
 		break;
 
@@ -98,11 +105,17 @@ void APlayerCharacter::choosePowerup(EPlayerPowerup powerup_)
 	case EPlayerPowerup::EHEALTHBOOST:
 		health++;
 		
-		ASpaceShooterGameMode* gameMode = (ASpaceShooterGameMode*)GetWorld()->GetAuthGameMode();
 		if (gameMode)
 		{
 			gameMode->UpdatePlayerStats(health, score, highScore);
 		}
+		break;
+
+		//set the player to recieve to double points
+	case EPlayerPowerup::EDOUBLEPOINTS:
+		movementSpeed = originalMovementSpeed;
+		rotationSpeed = originalRotationSpeed;
+		doublePoints = 2;
 		break;
 	}
 }
@@ -175,7 +188,7 @@ void APlayerCharacter::Shoot()
 void APlayerCharacter::IncreaseScore(int updatedScore_)
 {
 	//update the players new score to the HUD
-	score += updatedScore_;
+	score += updatedScore_ * doublePoints;
 
 	//update the highscore if a new highscore has been reached
 	if (highScore <= score)

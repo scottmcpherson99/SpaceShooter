@@ -12,7 +12,8 @@ enum class EPlayerPowerup : uint8
 {
 	ENOPOWERUP UMETA(DisplayName = "NoPowerup"),
 	ESPEEDBOOST UMETA(DisplayName = "SpeedBoost"),
-	EHEALTHBOOST UMETA(DisplayName = "HealthBoost")
+	EHEALTHBOOST UMETA(DisplayName = "HealthBoost"),
+	EDOUBLEPOINTS UMETA(DisplayName = "DoublePoints")
 };
 
 /**
@@ -117,4 +118,5 @@ private:
 	int score;
 	int health;
 	int highScore;
+	int doublePoints;
 };

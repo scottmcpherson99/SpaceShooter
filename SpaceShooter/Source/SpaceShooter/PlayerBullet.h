@@ -35,4 +35,14 @@ protected:
 	//player extra life asset
 	UPROPERTY(EditAnywhere, Category = "Powerups")
 		TSubclassOf<class AHealthDrop> healthDrop;
+
+
+	//player extra life asset
+	UPROPERTY(EditAnywhere, Category = "Powerups")
+		TSubclassOf<class ADoublePoints> doublePointsDrop;
+
+
+	//explosion sound
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Sound)
+		class USoundBase* explosionSound;
 };

@@ -7,6 +7,7 @@
 #include "Wall.h"
 #include "SpeedBoost.h"
 #include "HealthDrop.h"
+#include "DoublePoints.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/BoxComponent.h"
 
@@ -33,6 +34,13 @@ void APlayerBullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent
 	{
 		enemyCharacter->Destroy();
 
+
+		//play the explosion sound when the enemy collides with the player
+		if (explosionSound != nullptr)
+		{
+			UGameplayStatics::PlaySound2D(GetWorld(), explosionSound);
+		}
+
 		APlayerCharacter* playerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 		if (playerCharacter != nullptr)
 		{
@@ -54,7 +62,7 @@ void APlayerBullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent
 				//set the location to spawn the bullet
 				powerUpSpawnerVec = FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z + 5.f);
 
-				float powerUpToSpawn = FMath::FRandRange(0, 3);
+				float powerUpToSpawn = FMath::FRandRange(0, 5);
 
 
 				if (powerUpToSpawn < 2)
@@ -66,7 +74,17 @@ void APlayerBullet::OnTriggerBoxOverlap(UPrimitiveComponent* OverlappedComponent
 					}
 				}
 
-				else if (powerUpToSpawn >= 2 && powerUpToSpawn < 3)
+
+				else if (powerUpToSpawn >= 2 && powerUpToSpawn < 4)
+				{
+					//check that the bullet asset is not a nullptr and spawn the bullet
+					if (doublePointsDrop != nullptr)
+					{
+						world->SpawnActor<ADoublePoints>(doublePointsDrop, powerUpSpawnerVec, FRotator(0.0f, 0.0f, 0.0f), SpawnParams);
+					}
+				}
+
+				else if (powerUpToSpawn >= 4 && powerUpToSpawn < 5)
 				{
 					//check that the bullet asset is not a nullptr and spawn the bullet
 					if (healthDrop != nullptr)

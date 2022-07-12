@@ -71,7 +71,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerBullet); \
 
 #define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__speedBoost() { return STRUCT_OFFSET(APlayerBullet, speedBoost); } \
-	FORCEINLINE static uint32 __PPO__healthDrop() { return STRUCT_OFFSET(APlayerBullet, healthDrop); }
+	FORCEINLINE static uint32 __PPO__healthDrop() { return STRUCT_OFFSET(APlayerBullet, healthDrop); } \
+	FORCEINLINE static uint32 __PPO__doublePointsDrop() { return STRUCT_OFFSET(APlayerBullet, doublePointsDrop); } \
+	FORCEINLINE static uint32 __PPO__explosionSound() { return STRUCT_OFFSET(APlayerBullet, explosionSound); }
 
 
 #define SpaceShooter_Source_SpaceShooter_PlayerBullet_h_12_PROLOG
