@@ -131,6 +131,8 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\In
 D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\MainMenuWidget.generated.h
 D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\HowTo.h
 D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\HowTo.generated.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\CreditsWidget.h
+D:\Unreal Projects\SpaceShooter_\SpaceShooter\Intermediate\Build\Win64\UE4Editor\Inc\SpaceShooter\CreditsWidget.generated.h
 D:\Unreal Projects\SpaceShooter_\SpaceShooter\Source\SpaceShooter\PlayerCharacter.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\2D\Paper2D\Source\Paper2D\Classes\PaperCharacter.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h

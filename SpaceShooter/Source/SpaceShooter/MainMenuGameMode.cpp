@@ -6,6 +6,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "MainMenuWidget.h"
 #include "HowTo.h"
+#include "CreditsWidget.h"
 #include "PlayerCharacter.h"
 #include "Sound/SoundBase.h"
 #include "Blueprint/WidgetLayoutLibrary.h"
@@ -29,6 +30,12 @@ void AMainMenuGameMode::BeginPlay()
 	if (IsValid(HowToHUDWidget))
 	{
 		howToWidget = Cast<UHowTo>(CreateWidget(GetWorld(), HowToHUDWidget));
+	}
+
+	//check if the credits widget is valid
+	if (IsValid(CreditsHUDWidget))
+	{
+		creditsWidget = Cast<UCreditsWidget>(CreateWidget(GetWorld(), CreditsHUDWidget));
 	}
 
 	//Show the players mouse cursor and disable their movement
@@ -94,7 +101,8 @@ void AMainMenuGameMode::SwitchWidget(EMainMenuWidget widget_)
 
 		//switch the widget to the credits widget
 	case EMainMenuWidget::ECREDITS:
-
+		UWidgetLayoutLibrary::RemoveAllWidgets(GetWorld());
+		creditsWidget->AddToViewport();
 		break;
 	}
 }

@@ -8,6 +8,7 @@
 
 
 
+
 void UMainMenuWidget::NativeConstruct()
 {
 	if (StartGameButton)
@@ -33,6 +34,11 @@ void UMainMenuWidget::NativeConstruct()
 	if (HowToButton)
 	{
 		HowToButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnHowToClicked);
+	}
+
+	if (creditsButton)
+	{
+		creditsButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnCreditsClicked);
 	}
 }
 
@@ -89,6 +95,16 @@ void UMainMenuWidget::OnHowToClicked()
 	if (gameMode)
 	{
 		gameMode->SwitchWidget(EMainMenuWidget::EHOWTO);
+	}
+}
+
+void UMainMenuWidget::OnCreditsClicked()
+{
+	//show the credits widget
+	AMainMenuGameMode* gameMode = (AMainMenuGameMode*)GetWorld()->GetAuthGameMode();
+	if (gameMode)
+	{
+		gameMode->SwitchWidget(EMainMenuWidget::ECREDITS);
 	}
 }
 

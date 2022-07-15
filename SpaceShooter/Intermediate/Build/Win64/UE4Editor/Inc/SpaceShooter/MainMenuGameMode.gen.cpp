@@ -23,6 +23,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuGameMode() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 	SPACESHOOTER_API UClass* Z_Construct_UClass_UMainMenuWidget_NoRegister();
 	SPACESHOOTER_API UClass* Z_Construct_UClass_UHowTo_NoRegister();
+	SPACESHOOTER_API UClass* Z_Construct_UClass_UCreditsWidget_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 // End Cross Module References
 	static UEnum* EMainMenuWidget_StaticEnum()
@@ -177,6 +178,14 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuGameMode() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_howToWidget;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CreditsHUDWidget_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_CreditsHUDWidget;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_creditsWidget_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_creditsWidget;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_backgroundMusic_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_backgroundMusic;
@@ -231,6 +240,23 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuGameMode() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_howToWidget = { "howToWidget", nullptr, (EPropertyFlags)0x00100000000a0809, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainMenuGameMode, howToWidget), Z_Construct_UClass_UHowTo_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_howToWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_howToWidget_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_CreditsHUDWidget_MetaData[] = {
+		{ "Category", "Widget" },
+		{ "Comment", "//widget class to use for our howto screen\n" },
+		{ "ModuleRelativePath", "MainMenuGameMode.h" },
+		{ "ToolTip", "widget class to use for our howto screen" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_CreditsHUDWidget = { "CreditsHUDWidget", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainMenuGameMode, CreditsHUDWidget), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_CreditsHUDWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_CreditsHUDWidget_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_creditsWidget_MetaData[] = {
+		{ "Category", "Widget" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "MainMenuGameMode.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_creditsWidget = { "creditsWidget", nullptr, (EPropertyFlags)0x00100000000a0809, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainMenuGameMode, creditsWidget), Z_Construct_UClass_UCreditsWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_creditsWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_creditsWidget_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_backgroundMusic_MetaData[] = {
 		{ "Category", "Sound" },
 		{ "Comment", "//background music\n" },
@@ -244,6 +270,8 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuGameMode() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_mainMenuWidget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_HowToHUDWidget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_howToWidget,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_CreditsHUDWidget,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_creditsWidget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainMenuGameMode_Statics::NewProp_backgroundMusic,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMainMenuGameMode_Statics::StaticCppClassTypeInfo = {
@@ -273,7 +301,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMainMenuGameMode, 1189841509);
+	IMPLEMENT_CLASS(AMainMenuGameMode, 1391175569);
 	template<> SPACESHOOTER_API UClass* StaticClass<AMainMenuGameMode>()
 	{
 		return AMainMenuGameMode::StaticClass();

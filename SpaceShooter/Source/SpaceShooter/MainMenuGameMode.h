@@ -53,6 +53,13 @@ public:
 	UPROPERTY(VisibleInstanceOnly, Category = "Widget")
 		class UHowTo* howToWidget;
 
+	//widget class to use for our howto screen
+	UPROPERTY(EditAnywhere, Category = "Widget")
+		TSubclassOf<UUserWidget> CreditsHUDWidget;
+
+	UPROPERTY(VisibleInstanceOnly, Category = "Widget")
+		class UCreditsWidget* creditsWidget;
+
 	//switch which map is being selected
 	void SwitchMapChoice(EMainMenuLevel mapChoice_);
 

@@ -41,6 +41,10 @@ protected:
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 		class UButton* HowToButton;
 
+	//button that will show the credits widget
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
+		class UButton* creditsButton;
+
 	//level name
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* LevelName;
@@ -63,6 +67,10 @@ protected:
 	//choose the how to widget
 	UFUNCTION()
 		void OnHowToClicked();
+
+	//choose the credits widget
+	UFUNCTION()
+		void OnCreditsClicked();
 
 	virtual void NativeConstruct() override;
 	
