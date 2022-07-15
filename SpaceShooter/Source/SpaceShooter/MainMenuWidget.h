@@ -37,6 +37,10 @@ protected:
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
 		class UButton* PreviousButton;
 
+	//button that will show the howto widget
+	UPROPERTY(BlueprintReadOnly, meta = (BindWidget))
+		class UButton* HowToButton;
+
 	//level name
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* LevelName;
@@ -55,6 +59,10 @@ protected:
 	//choose the previous level
 	UFUNCTION()
 		void OnPreviousLevelClicked();
+
+	//choose the how to widget
+	UFUNCTION()
+		void OnHowToClicked();
 
 	virtual void NativeConstruct() override;
 	

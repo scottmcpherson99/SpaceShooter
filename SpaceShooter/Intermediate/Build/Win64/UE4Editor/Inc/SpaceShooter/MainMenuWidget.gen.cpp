@@ -20,6 +20,13 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 	UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(UMainMenuWidget::execOnHowToClicked)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnHowToClicked();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UMainMenuWidget::execOnPreviousLevelClicked)
 	{
 		P_FINISH;
@@ -53,6 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		UClass* Class = UMainMenuWidget::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnExitGameClicked", &UMainMenuWidget::execOnExitGameClicked },
+			{ "OnHowToClicked", &UMainMenuWidget::execOnHowToClicked },
 			{ "OnNextLevelClicked", &UMainMenuWidget::execOnNextLevelClicked },
 			{ "OnPreviousLevelClicked", &UMainMenuWidget::execOnPreviousLevelClicked },
 			{ "OnStartGameClicked", &UMainMenuWidget::execOnStartGameClicked },
@@ -80,6 +88,30 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMainMenuWidget_OnExitGameClicked_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UMainMenuWidget_OnHowToClicked_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UMainMenuWidget_OnHowToClicked_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//choose the how to widget\n" },
+		{ "ModuleRelativePath", "MainMenuWidget.h" },
+		{ "ToolTip", "choose the how to widget" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UMainMenuWidget_OnHowToClicked_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UMainMenuWidget, nullptr, "OnHowToClicked", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UMainMenuWidget_OnHowToClicked_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UMainMenuWidget_OnHowToClicked_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UMainMenuWidget_OnHowToClicked()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMainMenuWidget_OnHowToClicked_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -183,6 +215,10 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PreviousButton;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HowToButton_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HowToButton;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LevelName_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_LevelName;
@@ -196,6 +232,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UMainMenuWidget_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UMainMenuWidget_OnExitGameClicked, "OnExitGameClicked" }, // 1362970368
+		{ &Z_Construct_UFunction_UMainMenuWidget_OnHowToClicked, "OnHowToClicked" }, // 2252668340
 		{ &Z_Construct_UFunction_UMainMenuWidget_OnNextLevelClicked, "OnNextLevelClicked" }, // 1153472567
 		{ &Z_Construct_UFunction_UMainMenuWidget_OnPreviousLevelClicked, "OnPreviousLevelClicked" }, // 3901683374
 		{ &Z_Construct_UFunction_UMainMenuWidget_OnStartGameClicked, "OnStartGameClicked" }, // 3115972476
@@ -252,6 +289,17 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_PreviousButton = { "PreviousButton", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMainMenuWidget, PreviousButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_PreviousButton_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_PreviousButton_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToButton_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "Category", "MainMenuWidget" },
+		{ "Comment", "//button that will show the howto widget\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "MainMenuWidget.h" },
+		{ "ToolTip", "button that will show the howto widget" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToButton = { "HowToButton", nullptr, (EPropertyFlags)0x002008000008001c, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMainMenuWidget, HowToButton), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToButton_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToButton_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_LevelName_MetaData[] = {
 		{ "BindWidget", "" },
 		{ "Category", "MainMenuWidget" },
@@ -267,6 +315,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_ExitGameButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_NextButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_PreviousButton,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_HowToButton,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMainMenuWidget_Statics::NewProp_LevelName,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UMainMenuWidget_Statics::StaticCppClassTypeInfo = {
@@ -296,7 +345,7 @@ void EmptyLinkFunctionForGeneratedCodeMainMenuWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UMainMenuWidget, 4216311484);
+	IMPLEMENT_CLASS(UMainMenuWidget, 1020981064);
 	template<> SPACESHOOTER_API UClass* StaticClass<UMainMenuWidget>()
 	{
 		return UMainMenuWidget::StaticClass();

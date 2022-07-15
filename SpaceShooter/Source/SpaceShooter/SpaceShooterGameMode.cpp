@@ -24,8 +24,6 @@ void ASpaceShooterGameMode::BeginPlay()
 		gameWidget->AddToViewport();
 		gameWidget->UpdatePlayerHealth(3);
 		gameWidget->UpdatePlayerScore(0);
-
-		savePlayerHighScore = Cast<USaveScore>(UGameplayStatics::CreateSaveGameObject(USaveScore::StaticClass()));
 	}
 
 	//play the background music on repeat

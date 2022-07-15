@@ -7,6 +7,7 @@
 #include "MainMenuGameMode.h"
 
 
+
 void UMainMenuWidget::NativeConstruct()
 {
 	if (StartGameButton)
@@ -27,6 +28,11 @@ void UMainMenuWidget::NativeConstruct()
 	if (PreviousButton)
 	{
 		PreviousButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnPreviousLevelClicked);
+	}
+
+	if (HowToButton)
+	{
+		HowToButton->OnClicked.AddDynamic(this, &UMainMenuWidget::OnHowToClicked);
 	}
 }
 
@@ -73,6 +79,17 @@ void UMainMenuWidget::OnExitGameClicked()
 {
 	UKismetSystemLibrary::QuitGame(GetWorld(), UGameplayStatics::GetPlayerController(GetWorld(), 0), EQuitPreference::Quit, true);
 
+}
+
+
+void UMainMenuWidget::OnHowToClicked()
+{
+	//show the how to widget
+	AMainMenuGameMode* gameMode = (AMainMenuGameMode*)GetWorld()->GetAuthGameMode();
+	if (gameMode)
+	{
+		gameMode->SwitchWidget(EMainMenuWidget::EHOWTO);
+	}
 }
 
 void UMainMenuWidget::UpdateLevelName(FName name_)

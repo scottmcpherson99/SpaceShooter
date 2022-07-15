@@ -5,8 +5,10 @@
 #include "Blueprint/UserWidget.h"
 #include "Kismet/GameplayStatics.h"
 #include "MainMenuWidget.h"
+#include "HowTo.h"
 #include "PlayerCharacter.h"
 #include "Sound/SoundBase.h"
+#include "Blueprint/WidgetLayoutLibrary.h"
 
 AMainMenuGameMode::AMainMenuGameMode()
 {
@@ -21,6 +23,12 @@ void AMainMenuGameMode::BeginPlay()
 	{
 		mainMenuWidget = Cast<UMainMenuWidget>(CreateWidget(GetWorld(), MainMenuHUDWidget));
 		mainMenuWidget->AddToViewport();
+	}
+
+	//check if the howto widget is valid
+	if (IsValid(HowToHUDWidget))
+	{
+		howToWidget = Cast<UHowTo>(CreateWidget(GetWorld(), HowToHUDWidget));
 	}
 
 	//Show the players mouse cursor and disable their movement
@@ -47,22 +55,45 @@ void AMainMenuGameMode::StartGame(FName levelName_)
 	UGameplayStatics::OpenLevel(GetWorld(), levelName_);
 }
 
-void AMainMenuGameMode::SwitchMapChoice(EMainMenuWidget mapChoice_)
+void AMainMenuGameMode::SwitchMapChoice(EMainMenuLevel mapChoice_)
 {
 	switch (mapChoice_)
 	{
 		//switch the map to the open box map
-	case EMainMenuWidget::EOPENBOX :
+	case EMainMenuLevel::EOPENBOX :
 
 		break;
 
 		//switch the map to the four boxes map
-	case EMainMenuWidget::EFOURBOXES :
+	case EMainMenuLevel::EFOURBOXES :
 
 		break;
 
 		//switch the map to the fortress map
-	case EMainMenuWidget::EFORTRESS :
+	case EMainMenuLevel::EFORTRESS :
+
+		break;
+	}
+}
+
+void AMainMenuGameMode::SwitchWidget(EMainMenuWidget widget_)
+{
+	switch (widget_)
+	{
+		//switch the widget to the main menu widget
+	case EMainMenuWidget::EMAINMENU:
+		UWidgetLayoutLibrary::RemoveAllWidgets(GetWorld());
+		mainMenuWidget->AddToViewport();
+		break;
+
+		//switch the widget to the howto widget
+	case EMainMenuWidget::EHOWTO:
+		UWidgetLayoutLibrary::RemoveAllWidgets(GetWorld());
+		howToWidget->AddToViewport();
+		break;
+
+		//switch the widget to the credits widget
+	case EMainMenuWidget::ECREDITS:
 
 		break;
 	}

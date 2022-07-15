@@ -30,7 +30,7 @@ void AEnemyCharacter::BeginPlay()
 	//turn on collision checks
 	TriggerBox->OnComponentBeginOverlap.AddDynamic(this, &AEnemyCharacter::OnTriggerBoxOverlap);
 
-	GetCharacterMovement()->MaxWalkSpeed = FMath::FRandRange(150.f, 400.f);
+	GetCharacterMovement()->MaxWalkSpeed = FMath::FRandRange(150.f, 350.f);
 }
 
 void AEnemyCharacter::Tick(float DeltaTime)

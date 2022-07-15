@@ -238,7 +238,9 @@ int APlayerCharacter::GetPlayerHealth()
 /// Save and load high score
 void APlayerCharacter::SaveHighScore()
 {
+
 	saveHighScore = Cast<USaveScore>(UGameplayStatics::CreateSaveGameObject(USaveScore::StaticClass()));
+
 
 	if (saveHighScore != nullptr)
 	{
@@ -249,8 +251,10 @@ void APlayerCharacter::SaveHighScore()
 
 void APlayerCharacter::LoadHighScore()
 {
+	
 
 	ASpaceShooterGameMode* gameMode = (ASpaceShooterGameMode*)GetWorld()->GetAuthGameMode();
+
 
 	if (UGameplayStatics::DoesSaveGameExist(FString("Slot1"), 0))
 	{
@@ -259,6 +263,8 @@ void APlayerCharacter::LoadHighScore()
 		highScore = loadGameObj_->GetHighScore();
 
 		gameMode->UpdatePlayerStats(health, score, highScore);
+
+		saveHighScore = loadGameObj_;
 	}
 	else
 	{

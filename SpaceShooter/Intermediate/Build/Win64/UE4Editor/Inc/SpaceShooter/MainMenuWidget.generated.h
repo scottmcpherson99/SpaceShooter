@@ -16,6 +16,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define SpaceShooter_Source_SpaceShooter_MainMenuWidget_h_17_SPARSE_DATA
 #define SpaceShooter_Source_SpaceShooter_MainMenuWidget_h_17_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execOnHowToClicked); \
 	DECLARE_FUNCTION(execOnPreviousLevelClicked); \
 	DECLARE_FUNCTION(execOnNextLevelClicked); \
 	DECLARE_FUNCTION(execOnExitGameClicked); \
@@ -24,6 +25,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 #define SpaceShooter_Source_SpaceShooter_MainMenuWidget_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execOnHowToClicked); \
 	DECLARE_FUNCTION(execOnPreviousLevelClicked); \
 	DECLARE_FUNCTION(execOnNextLevelClicked); \
 	DECLARE_FUNCTION(execOnExitGameClicked); \
@@ -79,6 +81,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UMainMenuWidget); \
 	FORCEINLINE static uint32 __PPO__ExitGameButton() { return STRUCT_OFFSET(UMainMenuWidget, ExitGameButton); } \
 	FORCEINLINE static uint32 __PPO__NextButton() { return STRUCT_OFFSET(UMainMenuWidget, NextButton); } \
 	FORCEINLINE static uint32 __PPO__PreviousButton() { return STRUCT_OFFSET(UMainMenuWidget, PreviousButton); } \
+	FORCEINLINE static uint32 __PPO__HowToButton() { return STRUCT_OFFSET(UMainMenuWidget, HowToButton); } \
 	FORCEINLINE static uint32 __PPO__LevelName() { return STRUCT_OFFSET(UMainMenuWidget, LevelName); }
 
 

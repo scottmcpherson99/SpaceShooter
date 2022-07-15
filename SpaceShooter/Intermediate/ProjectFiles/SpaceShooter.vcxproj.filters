@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\SpaceShooter.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{8714463D-B499-443F-8ECF-DE7BF78CC11A}</UniqueIdentifier>
+      <UniqueIdentifier>{3260780A-0F9C-42F1-9279-F30B4DF777E7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\SpaceShooter.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{0D73A9DD-D178-437A-B4A4-CDF006B6FD71}</UniqueIdentifier>
+      <UniqueIdentifier>{0B97C56F-06B9-4152-9B10-229963EC4507}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\SpaceShooter">
-      <UniqueIdentifier>{67AB5560-6E18-4D31-87C1-6C7654AC7CE3}</UniqueIdentifier>
+      <UniqueIdentifier>{678441F4-CB3F-4571-A75F-5ACE8FC158B5}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\SpaceShooter\blackboard_keys.h">
       <Filter>Source\SpaceShooter</Filter>
@@ -72,6 +72,12 @@
       <Filter>Source\SpaceShooter</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\SpaceShooter\HealthDrop.h">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpaceShooter\HowTo.cpp">
+      <Filter>Source\SpaceShooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceShooter\HowTo.h">
       <Filter>Source\SpaceShooter</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\SpaceShooter\MainMenuGameMode.cpp">

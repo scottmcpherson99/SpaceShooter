@@ -17,6 +17,7 @@ class SPACESHOOTER_API USaveScore : public USaveGame
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Stats")
 		int highScore;
+	
 
 public:
 	//return the current highscore of the level
